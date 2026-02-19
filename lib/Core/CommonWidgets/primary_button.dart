@@ -7,7 +7,8 @@ class PrimaryButton extends StatelessWidget {
     super.key,
     required this.title,
     this.onPressed,
-    this.isStartAligned = false,  });
+    this.isStartAligned = false,
+  });
 
   final String title;
   final VoidCallback? onPressed;
@@ -20,9 +21,7 @@ class PrimaryButton extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 12),
         backgroundColor: AppColors.primaryColor,
         minimumSize: const Size(double.infinity, 60),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
       ),
       onPressed: onPressed,
 
@@ -32,8 +31,9 @@ class PrimaryButton extends StatelessWidget {
                 SizedBox(width: 10),
                 Text(
                   title,
-                  style: TextStyles.subtitle
-                      .copyWith(color: AppColors.whiteColor),
+                  style: TextStyles.subtitle.copyWith(
+                    color: AppColors.whiteColor,
+                  ),
                 ),
                 Spacer(),
                 Container(
@@ -45,22 +45,24 @@ class PrimaryButton extends StatelessWidget {
                   ),
                   child: IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.arrow_forward,
-                        color: AppColors.primaryColor),
+                    icon: Icon(
+                      Icons.arrow_forward,
+                      color: AppColors.primaryColor,
+                    ),
                   ),
                 ),
               ],
             )
           : Center(
               child: Row(
-                mainAxisAlignment:
-                    MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(width: 10),
                   Text(
                     title,
-                    style: TextStyles.subtitle
-                        .copyWith(color: AppColors.whiteColor),
+                    style: TextStyles.subtitle.copyWith(
+                      color: AppColors.whiteColor,
+                    ),
                   ),
                   Container(
                     width: 44,
@@ -71,8 +73,10 @@ class PrimaryButton extends StatelessWidget {
                     ),
                     child: IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.arrow_forward,
-                          color: AppColors.primaryColor),
+                      icon: Icon(
+                        Icons.arrow_forward,
+                        color: AppColors.primaryColor,
+                      ),
                     ),
                   ),
                 ],
