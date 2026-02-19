@@ -69,6 +69,7 @@ class LETS_YOU_IN extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Registure_Now()),
                   );
                 },
+                isStartAligned: true, 
               ),
               const SizedBox(height: 40),
 

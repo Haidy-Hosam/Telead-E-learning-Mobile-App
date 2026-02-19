@@ -3,10 +3,16 @@ import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButtom extends StatelessWidget {
-  const PrimaryButtom({super.key, required this.title, this.onPressed});
+  const PrimaryButtom({
+    super.key,
+    required this.title,
+    this.onPressed,
+    this.isStartAligned = true, 
+  });
 
   final String title;
   final VoidCallback? onPressed;
+  final bool isStartAligned;
 
   @override
   Widget build(BuildContext context) {
@@ -15,32 +21,64 @@ class PrimaryButtom extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 12),
         backgroundColor: AppColors.primaryColor,
         minimumSize: const Size(double.infinity, 60),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
       ),
       onPressed: onPressed,
 
-      child: Row(
-        children: [
-          SizedBox(width: 10),
-          Text(
-            title,
-            style: TextStyles.subtitle.copyWith(color: AppColors.whiteColor),
-          ),
-          Spacer(),
-          Container(
-            width: 44,
-            height: 44,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: AppColors.whiteColor,
+      child: isStartAligned
+          ? Row(
+              children: [
+                SizedBox(width: 10),
+                Text(
+                  title,
+                  style: TextStyles.subtitle
+                      .copyWith(color: AppColors.whiteColor),
+                ),
+                Spacer(),
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.whiteColor,
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.arrow_forward,
+                        color: AppColors.primaryColor),
+                  ),
+                ),
+              ],
+            )
+          : Center(
+              child: Row(
+                mainAxisAlignment:
+                    MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(width: 10),
+                  Text(
+                    title,
+                    style: TextStyles.subtitle
+                        .copyWith(color: AppColors.whiteColor),
+                  ),
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColors.whiteColor,
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.arrow_forward,
+                          color: AppColors.primaryColor),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            child: IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.arrow_forward, color: AppColors.primaryColor),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

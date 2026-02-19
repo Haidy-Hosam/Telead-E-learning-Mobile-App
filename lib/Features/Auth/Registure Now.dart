@@ -43,7 +43,7 @@ class Registure_Now extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
-              PrimaryButtom(title: 'Sign Up', onPressed: () {}),
+              PrimaryButtom(title: 'Sign Up', onPressed: () {}, isStartAligned: false),
               SizedBox(height: 30), 
               Align(
                 alignment: Alignment.center,
