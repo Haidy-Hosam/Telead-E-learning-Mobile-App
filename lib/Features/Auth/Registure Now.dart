@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/icon_elevated_button.dart';
-import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_buttom.dart';
+import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
@@ -43,7 +43,7 @@ class Registure_Now extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
-              PrimaryButtom(title: 'Sign Up', onPressed: () {}, isStartAligned: false),
+              PrimaryButton(title: 'Sign Up', onPressed: () {}, isStartAligned: false),
               SizedBox(height: 30), 
               Align(
                 alignment: Alignment.center,

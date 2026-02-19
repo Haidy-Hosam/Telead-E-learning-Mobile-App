@@ -2,13 +2,12 @@ import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
 import 'package:flutter/material.dart';
 
-class PrimaryButtom extends StatelessWidget {
-  const PrimaryButtom({
+class PrimaryButton extends StatelessWidget {
+  const PrimaryButton({
     super.key,
     required this.title,
     this.onPressed,
-    this.isStartAligned = true, 
-  });
+    this.isStartAligned = false,  });
 
   final String title;
   final VoidCallback? onPressed;
