@@ -1,5 +1,4 @@
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/course_item.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/mentor_item.dart';
 import 'package:flutter/material.dart';
@@ -38,37 +37,15 @@ class _OnlineCoursesViewState extends State<OnlineCoursesView> {
                 ),
               ),
               SizedBox(height: 25),
-              Row(
-                spacing: 20,
-                children: List.generate(
-                  2,
-                  (index) => Expanded(
-                    child: GestureDetector(
-                      onTap: () => setState(() {
-                        curTab = index;
-                      }),
-                      child: Container(
-                        height: 48,
-                        decoration: BoxDecoration(
-                          color: curTab == index
-                              ? AppColors.greenColor
-                              : AppColors.lightGreenColor,
-                          borderRadius: BorderRadius.circular(24),
-                        ),
-                        alignment: Alignment.center,
-                        child: Text(
-                          index == 0 ? 'Courses' : 'Mentors',
-                          style: TextStyles.body.copyWith(
-                            fontWeight: FontWeight.w800,
-                            color: curTab == index
-                                ? AppColors.whiteColor
-                                : AppColors.blackColor,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+              CustomToggleTabs(
+                curTab: curTab,
+                firstTab: 'Courses',
+                secondTab: 'Mentors',
+                onTabChanged: (value) {
+                  setState(() {
+                    curTab = value;
+                  });
+                },
               ),
               SizedBox(height: 15),
               Row(
