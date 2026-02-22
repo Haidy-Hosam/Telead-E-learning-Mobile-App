@@ -1,6 +1,7 @@
 import 'package:e_learning_mobile_app/Features/Categories/widgets/course_item.dart';
 import 'package:flutter/material.dart';
 
+//بلاااا
 class OnlineCoursesView extends StatelessWidget {
   const OnlineCoursesView({super.key});
 
