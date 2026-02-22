@@ -1,8 +1,8 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:flutter/material.dart';
 
-class CourseItem extends StatelessWidget {
-  const CourseItem({super.key});
+class OnlineCourseItem extends StatelessWidget {
+  const OnlineCourseItem({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,19 +1,17 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/utils/app_lists.dart';
 import 'package:flutter/material.dart';
 
 class CustomToggleTabs extends StatelessWidget {
-  final String firstTab;
-  final String secondTab;
+  final List<String> tabsNames;
   final void Function(int value)? onTabChanged;
   final int curTab;
 
   const CustomToggleTabs({
     super.key,
-    required this.firstTab,
-    required this.secondTab,
+
     this.onTabChanged,
     required this.curTab,
+    required this.tabsNames,
   });
 
   @override
@@ -22,7 +20,6 @@ class CustomToggleTabs extends StatelessWidget {
       spacing: 20,
       children: List.generate(2, (index) {
         final isSelected = curTab == index;
-        final label = AppLists.onlineCoursesTabs[index];
         return Expanded(
           child: GestureDetector(
             onTap: () {
@@ -39,7 +36,7 @@ class CustomToggleTabs extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Text(
-                label,
+                tabsNames[index],
                 style: TextStyle(
                   color: isSelected
                       ? AppColors.whiteColor

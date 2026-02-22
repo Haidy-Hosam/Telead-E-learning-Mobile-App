@@ -1,5 +1,6 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Features/Auth/splash_screen.dart';
+import 'package:e_learning_mobile_app/Features/myCourses/views/my_courses.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MainApp extends StatelessWidget {
           onSurface: AppColors.blackColor,
         ),
       ),
-      home: Scaffold(body: SplashScreen()),
+      home: Scaffold(body: MyCoursesView()),
     );
   }
 }

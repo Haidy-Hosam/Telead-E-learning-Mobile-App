@@ -1,16 +1,17 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/online_course_item.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/mentor_item.dart';
+import 'package:e_learning_mobile_app/Features/myCourses/widgets/my_courses_item.dart';
 import 'package:flutter/material.dart';
 
-class OnlineCoursesView extends StatefulWidget {
-  const OnlineCoursesView({super.key});
+class MyCoursesView extends StatefulWidget {
+  const MyCoursesView({super.key});
 
   @override
-  State<OnlineCoursesView> createState() => _OnlineCoursesViewState();
+  State<MyCoursesView> createState() => _MyCoursesViewState();
 }
 
-class _OnlineCoursesViewState extends State<OnlineCoursesView> {
+class _MyCoursesViewState extends State<MyCoursesView> {
   int curTab = 0;
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class _OnlineCoursesViewState extends State<OnlineCoursesView> {
                 spacing: 12,
                 children: [
                   IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-                  Text(curTab == 0 ? 'Online Courses' : 'Mentors'),
+                  Text('My Courses'),
                 ],
               ),
               SizedBox(height: 16),
@@ -39,33 +40,20 @@ class _OnlineCoursesViewState extends State<OnlineCoursesView> {
               SizedBox(height: 25),
               CustomToggleTabs(
                 curTab: curTab,
-                tabsNames: ['Courses', 'Mentors'],
+                tabsNames: ['Completed', 'Ongoing'],
                 onTabChanged: (value) {
                   setState(() {
                     curTab = value;
                   });
                 },
               ),
-              SizedBox(height: 15),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Result for “Graphic Design”'),
-                  Row(
-                    spacing: 5,
-                    children: [
-                      Text(curTab == 0 ? '2480 Founds' : '18 Founds'),
-                      Icon(Icons.arrow_forward_ios, size: 16),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
+              SizedBox(height: 22),
               Expanded(
                 child: ListView.builder(
                   itemCount: 8,
-                  itemBuilder: (context, index) =>
-                      curTab == 0 ? OnlineCourseItem() : MentorItem(),
+                  itemBuilder: (context, index) => curTab == 0
+                      ? MyCourseItem(completed: true)
+                      : MyCourseItem(completed: false),
                 ),
               ),
             ],
