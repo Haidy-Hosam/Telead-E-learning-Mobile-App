@@ -1,6 +1,4 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
-import 'package:e_learning_mobile_app/Features/Categories/widgets/online_course_item.dart';
-import 'package:e_learning_mobile_app/Features/Categories/widgets/mentor_item.dart';
 import 'package:e_learning_mobile_app/Features/myCourses/widgets/my_courses_item.dart';
 import 'package:flutter/material.dart';
 
