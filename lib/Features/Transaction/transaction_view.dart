@@ -1,8 +1,6 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Features/Inbox/inbox_item.dart';
 import 'package:e_learning_mobile_app/Features/Transaction/transaction_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class TransactionView extends StatefulWidget {
   const TransactionView({super.key});
