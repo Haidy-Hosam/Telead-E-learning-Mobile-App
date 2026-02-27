@@ -64,10 +64,7 @@ class LETS_YOU_IN extends StatelessWidget {
               PrimaryButton(
                 title: 'Sign In with Your Account',
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()),
-                  );
+                  pushReplacement(context, LoginScreen());
                 },
                 isStartAligned: true,
               ),

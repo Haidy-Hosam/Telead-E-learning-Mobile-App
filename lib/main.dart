@@ -1,6 +1,8 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Splash_Screen/splash_screen.dart';
+import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
 import 'package:e_learning_mobile_app/Features/Profile/profile_view.dart';
 import 'package:e_learning_mobile_app/Features/Transaction/transaction_view.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +38,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       // home: Scaffold(body: ProfileView()),
-      home: Scaffold(body: SplashScreen()),
+      home: Scaffold(body: LoginScreen()),
     );
   }
 }

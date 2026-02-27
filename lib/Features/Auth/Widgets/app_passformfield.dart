@@ -4,12 +4,12 @@ class AppPassFormField extends StatefulWidget {
   const AppPassFormField({
     super.key,
     required this.title,
-    required this.prefix,
+    this.prefix = const Icon(Icons.lock_outlined),
     this.keyboardType = TextInputType.text,
-    this.suffix,
+    this.suffix
   });
   final String title;
-  final Icon prefix;
+  final Icon? prefix;
   final Icon? suffix;
   final TextInputType keyboardType;
 
@@ -26,7 +26,7 @@ class _AppPassFormFieldState extends State<AppPassFormField> {
       keyboardType: widget.keyboardType,
       decoration: InputDecoration(
         prefixIcon: widget.prefix,
-        suffix:
+        suffixIcon:
             widget.suffix ??
             IconButton(
               onPressed: () {
@@ -35,7 +35,7 @@ class _AppPassFormFieldState extends State<AppPassFormField> {
                 });
               },
               icon: obscureText
-                  ? Icon(Icons.visibility_off)
+                  ? Icon(Icons.visibility_off_outlined)
                   : Icon(Icons.remove_red_eye_rounded),
             ),
         labelText: widget.title,

@@ -9,6 +9,7 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -62,7 +63,6 @@ class LoginScreen extends StatelessWidget {
 
                 AppPassFormField(
                   title: 'Password',
-                  prefix: const Icon(Icons.lock_outlined),
                 ),
                 SizedBox(height: 20),
 
@@ -71,7 +71,9 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     RemembermeSqare(),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        pushTo(context, ForgotPassword());
+                      },
                       style: TextButton.styleFrom(padding: EdgeInsets.zero),
                       child: Text('Forgot Password?'),
                     ),

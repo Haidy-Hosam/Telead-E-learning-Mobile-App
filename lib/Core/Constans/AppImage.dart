@@ -8,5 +8,5 @@ class AppImages {
   static const String googlecoloredsvg  = 'assets/images/google-color-svgrepo-com.svg';
   static const String applecoloredsvg  = 'assets/images/apple-173-svgrepo-com.svg';
   static const String AgreeIconsvg  = 'assets/icons/AgreeIcon.svg';
-  // static const String t  = 'assets/images/t.png';
+  static const String green_email_svg  = 'assets/icons/green_email.svg';
 }
