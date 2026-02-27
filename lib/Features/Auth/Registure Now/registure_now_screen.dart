@@ -1,6 +1,8 @@
-import 'package:e_learning_mobile_app/Core/CommonWidgets/app_passformfield.dart';
-import 'package:e_learning_mobile_app/Core/CommonWidgets/app_textformfield.dart';
-import 'package:e_learning_mobile_app/Core/CommonWidgets/auth_redirect_text.dart';
+import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_passformfield.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_textformfield.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Widgets/auth_redirect_text.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/icon_elevated_button.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
@@ -98,7 +100,13 @@ class Registure_Now extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
 
-                AuthRedirectText(first: 'Already have an Account?',sec: ' SIGN IN',),
+                AuthRedirectText(
+                  first: 'Already have an Account?',
+                  sec: ' SIGN IN',
+                  onTap: () {
+                    pushReplacement(context, LoginScreen());
+                  },
+                ),
               ],
             ),
           ),

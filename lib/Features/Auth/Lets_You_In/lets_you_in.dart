@@ -1,10 +1,12 @@
-import 'package:e_learning_mobile_app/Core/CommonWidgets/auth_redirect_text.dart';
+import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Widgets/auth_redirect_text.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/socialButton.dart';
-import 'package:e_learning_mobile_app/Features/Auth/Registure%20Now.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Registure%20Now/registure_now_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -21,10 +23,11 @@ class LETS_YOU_IN extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 40,
-                    vertical: 80,
-                  ),                child: SvgPicture.asset(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 80,
+                ),
+                child: SvgPicture.asset(
                   AppImages.logosvg2,
                   width: 220,
                   fit: BoxFit.cover,
@@ -63,16 +66,22 @@ class LETS_YOU_IN extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Registure_Now()),
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
                 },
-                isStartAligned: true, 
+                isStartAligned: true,
               ),
               const SizedBox(height: 40),
 
               Align(
                 alignment: Alignment.center,
-                child: AuthRedirectText(first: "Don’t have an Account?",sec: ' SIGN UP',)
+                child: AuthRedirectText(
+                  first: "Don’t have an Account?",
+                  sec: ' SIGN UP',
+                  onTap: () {
+                    pushReplacement(context, Registure_Now());
+                  },
+                ),
               ),
             ],
           ),

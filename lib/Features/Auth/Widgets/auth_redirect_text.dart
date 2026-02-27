@@ -1,16 +1,19 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 
 class AuthRedirectText extends StatelessWidget {
   const AuthRedirectText({
     super.key,
     required this.first,
-    required this.sec
+    required this.sec ,
+    required this.onTap
   });
 
 final String first;
 final String sec;
+final VoidCallback onTap ;
   @override
   Widget build(BuildContext context) {
     return RichText(
@@ -31,7 +34,10 @@ final String sec;
               decoration: TextDecoration.underline,
               decorationThickness: 2,
             ),
+                        recognizer: TapGestureRecognizer()
+              ..onTap = onTap,
           ),
+          
         ],
       ),
     );
