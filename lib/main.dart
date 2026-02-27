@@ -1,14 +1,12 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Splash_Screen/splash_screen.dart';
-import 'package:e_learning_mobile_app/Features/Profile/profile_view.dart';
-import 'package:e_learning_mobile_app/Features/Transaction/transaction_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
 }
-
+//بداية التطبيق 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
