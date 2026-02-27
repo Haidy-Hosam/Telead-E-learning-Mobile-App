@@ -18,4 +18,8 @@ class TextStyles {
     fontSize: 16,
     fontFamily: fontFamily,
   );
+    static const TextStyle caption = TextStyle(
+    fontSize: 14,
+    fontFamily: fontFamily,
+  );
 }
