@@ -21,6 +21,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/icons/
   fonts:
     - family: Mulish
       fonts:

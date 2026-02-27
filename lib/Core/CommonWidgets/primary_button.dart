@@ -33,6 +33,7 @@ class PrimaryButton extends StatelessWidget {
                   title,
                   style: TextStyles.subtitle.copyWith(
                     color: AppColors.whiteColor,
+                    fontSize: 18
                   ),
                 ),
                 Spacer(),

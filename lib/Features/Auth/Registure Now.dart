@@ -1,10 +1,13 @@
+import 'package:e_learning_mobile_app/Core/CommonWidgets/app_passformfield.dart';
+import 'package:e_learning_mobile_app/Core/CommonWidgets/app_textformfield.dart';
+import 'package:e_learning_mobile_app/Core/CommonWidgets/auth_redirect_text.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/icon_elevated_button.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Registure_Now extends StatelessWidget {
   const Registure_Now({super.key});
@@ -12,63 +15,92 @@ class Registure_Now extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(25.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(
-                AppImages.logosvg2,
-                width: 200,
-                fit: BoxFit.cover,
-              ),
-              SizedBox(height: 50),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  "Getting Started.!",
-                  style: TextStyles.headline.copyWith(fontSize: 25),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(25.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 90,
+                    vertical: 60,
+                  ),
+                  child: SvgPicture.asset(AppImages.logosvg2, width: 240),
                 ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  "Create an Account to Continue your allCourses",
-                  style: TextStyles.body.copyWith(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Getting Started.!",
+                    style: TextStyles.headline.copyWith(fontSize: 25),
                   ),
                 ),
-              ),
-              SizedBox(height: 30),
-              PrimaryButton(title: 'Sign Up', onPressed: () {}),
-              SizedBox(height: 30), 
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Or Continue With",
-                  style: TextStyles.subtitle.copyWith(color: AppColors.gray),
+                SizedBox(height: 10),
+
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Create an Account to Continue your allCourses",
+                    style: TextStyles.body.copyWith(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ),
-              ),
-              SizedBox(height: 30),
-              Align(
-                alignment: Alignment.center,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                SizedBox(height: 30),
+
+                AppTextFormField(
+                  title: 'Email',
+                  prefix: Icon(Icons.email_outlined),
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                SizedBox(height: 20),
+
+                AppPassFormField(
+                  title: 'Password',
+                  prefix: const Icon(Icons.lock_outlined),
+                ),
+                SizedBox(height: 20),
+
+                Row(
                   children: [
-                    IconElevatedButton( 
-                      imagePath: AppImages.googlecoloredsvg,
+                    SvgPicture.asset(
+                      AppImages.AgreeIconsvg,
+                      width: 24,
+                      height: 24,
                     ),
-                    SizedBox(width: 60),
-                    IconElevatedButton( 
-                      imagePath: AppImages.applecoloredsvg,
-                    ),
+                    const SizedBox(width: 10),
+                    const Expanded(child: Text("Agree to Terms & Conditions")),
                   ],
                 ),
-              ),
-            ],
+                const SizedBox(height: 30),
+
+                PrimaryButton(title: 'Sign Up', onPressed: () {}),
+                SizedBox(height: 10),
+
+                Text(
+                  "Or Continue With",
+                  style: TextStyles.subtitle.copyWith(
+                    color: AppColors.gray,
+                    fontSize: 14,
+                  ),
+                ),
+                SizedBox(height: 30),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconElevatedButton(imagePath: AppImages.googlecoloredsvg),
+                    SizedBox(width: 60),
+                    IconElevatedButton(imagePath: AppImages.applecoloredsvg),
+                  ],
+                ),
+                SizedBox(height: 30),
+
+                AuthRedirectText(first: 'Already have an Account?',sec: ' SIGN IN',),
+              ],
+            ),
           ),
         ),
       ),
