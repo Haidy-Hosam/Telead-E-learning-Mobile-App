@@ -36,7 +36,7 @@ class LETS_YOU_IN extends StatelessWidget {
               // SizedBox(height: 70),
               Text(
                 "Let’s you in",
-                style: TextStyles.headline.copyWith(fontSize: 24),
+                style: AppTextStyles.headline.copyWith(fontSize: 24),
               ),
               SizedBox(height: 30),
 
@@ -56,7 +56,7 @@ class LETS_YOU_IN extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Text(
                   "( or )",
-                  style: TextStyles.subtitle.copyWith(color: AppColors.gray),
+                  style: AppTextStyles.subtitle.copyWith(color: AppColors.gray),
                 ),
               ),
               const SizedBox(height: 30),

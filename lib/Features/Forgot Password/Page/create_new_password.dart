@@ -16,19 +16,19 @@ class CreateNewPassword extends StatelessWidget {
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
         title: Text(
           'Create New Password',
-          style: TextStyles.headline.copyWith(fontSize: 21),
+          style: AppTextStyles.headline.copyWith(fontSize: 21),
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Create Your New Password',
               textAlign: TextAlign.start,
-              style: TextStyles.body.copyWith(
+              style: AppTextStyles.body.copyWith(
                 color: AppColors.blackColor,
                 fontSize: 19,
                 fontWeight: FontWeight.w700,
@@ -36,9 +36,9 @@ class CreateNewPassword extends StatelessWidget {
             ),
             SizedBox(height: 20),
             AppPassFormField(title: 'Password'),
-            SizedBox(height:25),
+            SizedBox(height: 25),
             AppPassFormField(title: 'Password'),
-        
+
             SizedBox(height: 50),
             PrimaryButton(
               title: 'Continue',

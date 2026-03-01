@@ -37,7 +37,7 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Let’s Sign In.!",
-                    style: TextStyles.headline.copyWith(fontSize: 25),
+                    style: AppTextStyles.headline.copyWith(fontSize: 25),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Login to Your Account to Continue your Courses",
-                    style: TextStyles.body.copyWith(
+                    style: AppTextStyles.body.copyWith(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -61,9 +61,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
 
-                AppPassFormField(
-                  title: 'Password',
-                ),
+                AppPassFormField(title: 'Password'),
                 SizedBox(height: 20),
 
                 Row(
@@ -86,7 +84,7 @@ class LoginScreen extends StatelessWidget {
 
                 Text(
                   "Or Continue With",
-                  style: TextStyles.subtitle.copyWith(
+                  style: AppTextStyles.subtitle.copyWith(
                     color: AppColors.gray,
                     fontSize: 14,
                   ),

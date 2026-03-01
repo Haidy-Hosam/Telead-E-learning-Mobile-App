@@ -72,7 +72,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
         ),
         title: Text(
           'Forgot Password',
-          style: TextStyles.headline.copyWith(fontSize: 21),
+          style: AppTextStyles.headline.copyWith(fontSize: 21),
         ),
       ),
       body: Padding(
@@ -83,7 +83,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
             Text(
               'Code has been Send to ( +1 ) ***-***-*529',
               textAlign: TextAlign.center,
-              style: TextStyles.body.copyWith(
+              style: AppTextStyles.body.copyWith(
                 color: AppColors.gray,
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
@@ -109,9 +109,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
             secondsRemaining > 0
                 ? Text(
                     "Resend Code in ${secondsRemaining}s",
-                    style: TextStyles.body.copyWith(
-                      color: AppColors.gray,
-                    ),
+                    style: AppTextStyles.body.copyWith(color: AppColors.gray),
                   )
                 : TextButton(
                     onPressed: startTimer,
@@ -156,8 +154,10 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
                 onPressed: () {
                   if (pinController.text.isNotEmpty) {
                     setState(() {
-                      pinController.text = pinController.text
-                          .substring(0, pinController.text.length - 1);
+                      pinController.text = pinController.text.substring(
+                        0,
+                        pinController.text.length - 1,
+                      );
                     });
                   }
                 },
@@ -172,11 +172,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
 
   Widget _numberRow(int a, int b, int c) {
     return Row(
-      children: [
-        _numberButton(a),
-        _numberButton(b),
-        _numberButton(c),
-      ],
+      children: [_numberButton(a), _numberButton(b), _numberButton(c)],
     );
   }
 
@@ -195,10 +191,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
           alignment: Alignment.center,
           child: Text(
             "$number",
-            style: const TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.w600,
-            ),
+            style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
           ),
         ),
       ),

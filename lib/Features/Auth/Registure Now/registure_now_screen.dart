@@ -35,7 +35,7 @@ class Registure_Now extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Getting Started.!",
-                    style: TextStyles.headline.copyWith(fontSize: 25),
+                    style: AppTextStyles.headline.copyWith(fontSize: 25),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -44,7 +44,7 @@ class Registure_Now extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Create an Account to Continue your allCourses",
-                    style: TextStyles.body.copyWith(
+                    style: AppTextStyles.body.copyWith(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -83,7 +83,7 @@ class Registure_Now extends StatelessWidget {
 
                 Text(
                   "Or Continue With",
-                  style: TextStyles.subtitle.copyWith(
+                  style: AppTextStyles.subtitle.copyWith(
                     color: AppColors.gray,
                     fontSize: 14,
                   ),

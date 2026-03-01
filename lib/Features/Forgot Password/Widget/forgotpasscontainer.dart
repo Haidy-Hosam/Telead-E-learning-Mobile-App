@@ -30,15 +30,11 @@ class Forgotpasscontainer extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyles.body.copyWith(
-                  color: AppColors.gray,
-                ),
+                style: AppTextStyles.body.copyWith(color: AppColors.gray),
               ),
               Text(
                 subtitle,
-                style: TextStyles.body.copyWith(
-                  fontWeight: FontWeight.w600,
-                ),
+                style: AppTextStyles.body.copyWith(fontWeight: FontWeight.w600),
               ),
             ],
           ),
