@@ -4,11 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SocialButton extends StatelessWidget {
-  const SocialButton({
-    super.key,
-    required this.imagePath,
-    required this.title,
-  });
+  const SocialButton({super.key, required this.imagePath, required this.title});
   final String imagePath;
   final String title;
 
@@ -45,7 +41,7 @@ class SocialButton extends StatelessWidget {
           SizedBox(width: 10),
           Text(
             title,
-            style: TextStyles.subtitle.copyWith(color: AppColors.gray),
+            style: AppTextStyles.subtitle.copyWith(color: AppColors.gray),
           ),
         ],
       ),

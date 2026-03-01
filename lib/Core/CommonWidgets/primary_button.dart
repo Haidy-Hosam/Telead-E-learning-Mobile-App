@@ -31,7 +31,7 @@ class PrimaryButton extends StatelessWidget {
                 SizedBox(width: 10),
                 Text(
                   title,
-                  style: TextStyles.subtitle.copyWith(
+                  style: AppTextStyles.subtitle.copyWith(
                     color: AppColors.whiteColor,
                   ),
                 ),
@@ -60,7 +60,7 @@ class PrimaryButton extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     title,
-                    style: TextStyles.subtitle.copyWith(
+                    style: AppTextStyles.subtitle.copyWith(
                       color: AppColors.whiteColor,
                     ),
                   ),

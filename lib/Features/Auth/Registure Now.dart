@@ -28,7 +28,7 @@ class Registure_Now extends StatelessWidget {
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   "Getting Started.!",
-                  style: TextStyles.headline.copyWith(fontSize: 25),
+                  style: AppTextStyles.headline.copyWith(fontSize: 25),
                 ),
               ),
               SizedBox(height: 10),
@@ -36,7 +36,7 @@ class Registure_Now extends StatelessWidget {
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   "Create an Account to Continue your allCourses",
-                  style: TextStyles.body.copyWith(
+                  style: AppTextStyles.body.copyWith(
                     fontSize: 12,
                     fontWeight: FontWeight.w500,
                   ),
@@ -44,12 +44,12 @@ class Registure_Now extends StatelessWidget {
               ),
               SizedBox(height: 30),
               PrimaryButton(title: 'Sign Up', onPressed: () {}),
-              SizedBox(height: 30), 
+              SizedBox(height: 30),
               Align(
                 alignment: Alignment.center,
                 child: Text(
                   "Or Continue With",
-                  style: TextStyles.subtitle.copyWith(color: AppColors.gray),
+                  style: AppTextStyles.subtitle.copyWith(color: AppColors.gray),
                 ),
               ),
               SizedBox(height: 30),
@@ -58,13 +58,9 @@ class Registure_Now extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconElevatedButton( 
-                      imagePath: AppImages.googlecoloredsvg,
-                    ),
+                    IconElevatedButton(imagePath: AppImages.googlecoloredsvg),
                     SizedBox(width: 60),
-                    IconElevatedButton( 
-                      imagePath: AppImages.applecoloredsvg,
-                    ),
+                    IconElevatedButton(imagePath: AppImages.applecoloredsvg),
                   ],
                 ),
               ),

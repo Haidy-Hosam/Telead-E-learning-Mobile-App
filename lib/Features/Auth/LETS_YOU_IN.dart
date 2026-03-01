@@ -28,7 +28,7 @@ class LETS_YOU_IN extends StatelessWidget {
               SizedBox(height: 70),
               Text(
                 "Let’s you in",
-                style: TextStyles.headline.copyWith(fontSize: 25),
+                style: AppTextStyles.headline.copyWith(fontSize: 25),
               ),
               SizedBox(height: 30),
 
@@ -55,7 +55,7 @@ class LETS_YOU_IN extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Text(
                   "(or)",
-                  style: TextStyles.subtitle.copyWith(color: AppColors.gray),
+                  style: AppTextStyles.subtitle.copyWith(color: AppColors.gray),
                 ),
               ),
               const SizedBox(height: 30),
@@ -69,7 +69,7 @@ class LETS_YOU_IN extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Registure_Now()),
                   );
                 },
-                isStartAligned: true, 
+                isStartAligned: true,
               ),
               const SizedBox(height: 40),
 
@@ -80,11 +80,11 @@ class LETS_YOU_IN extends StatelessWidget {
                   children: [
                     Text(
                       "Don't have an account? ",
-                      style: TextStyles.body.copyWith(color: AppColors.gray),
+                      style: AppTextStyles.body.copyWith(color: AppColors.gray),
                     ),
                     Text(
                       "SIGN UP",
-                      style: TextStyles.subtitle.copyWith(
+                      style: AppTextStyles.subtitle.copyWith(
                         color: AppColors.primaryColor,
                         fontWeight: FontWeight.w600,
                         fontSize: 16,

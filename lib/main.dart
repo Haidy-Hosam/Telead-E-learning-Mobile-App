@@ -1,5 +1,6 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Features/Profile/profile_view.dart';
+import 'package:e_learning_mobile_app/Features/Profile/views/edit_profile_view.dart';
+import 'package:e_learning_mobile_app/Features/Profile/views/profile_view.dart';
 import 'package:e_learning_mobile_app/Features/Transaction/transaction_view.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,7 @@ class MainApp extends StatelessWidget {
           onSurface: AppColors.blackColor,
         ),
       ),
-      home: Scaffold(body: ProfileView()),
+      home: Scaffold(body: EditProfileView()),
     );
   }
 }
