@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Features/Auth/LETS_YOU_IN.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Lets_You_In/lets_you_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

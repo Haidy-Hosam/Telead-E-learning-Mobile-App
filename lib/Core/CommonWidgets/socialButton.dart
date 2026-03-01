@@ -10,40 +10,51 @@ class SocialButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.all(12),
-        backgroundColor: AppColors.backgraund,
-        shadowColor: Colors.transparent,
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
+    return SizedBox
+    (  width: double.infinity,
 
-        children: [
-          Container(
-            width: 50,
-            height: 50,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: Center(
-              child: SvgPicture.asset(
-                imagePath,
-                width: 18,
-                height: 18,
-                fit: BoxFit.contain,
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(12),
+          backgroundColor:AppColors.backgraund,
+          shadowColor: Colors.transparent,
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+      
+          children: [
+            Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color.fromRGBO(0, 0, 0, 0.08),
+                    blurRadius: 10,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Center(
+                child: SvgPicture.asset(
+                  imagePath,
+                  width: 18,
+                  height: 18,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
-          ),
-
-          SizedBox(width: 10),
-          Text(
-            title,
-            style: AppTextStyles.subtitle.copyWith(color: AppColors.gray),
-          ),
-        ],
+      
+            SizedBox(width: 10),
+            Text(
+              title,
+              style: TextStyles.subtitle.copyWith(color: AppColors.gray , fontSize: 16),
+            ),
+          ],
+        ),
       ),
     );
   }

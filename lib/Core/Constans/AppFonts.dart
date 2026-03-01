@@ -1,3 +1,3 @@
 class AppFonts {
-  static const String poppins = 'Mulish';
+  static const String Mulish = 'Mulish';
 }

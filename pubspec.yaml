@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.2.3
+  pinput: ^6.0.2
+
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +23,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/icons/
   fonts:
     - family: Mulish
       fonts:

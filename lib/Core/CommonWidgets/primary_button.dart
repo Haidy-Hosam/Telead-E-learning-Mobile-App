@@ -20,6 +20,7 @@ class PrimaryButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: EdgeInsets.symmetric(horizontal: 12),
         backgroundColor: AppColors.primaryColor,
+        disabledBackgroundColor: Colors.grey,
         minimumSize: const Size(double.infinity, 60),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
       ),
@@ -33,6 +34,7 @@ class PrimaryButton extends StatelessWidget {
                   title,
                   style: AppTextStyles.subtitle.copyWith(
                     color: AppColors.whiteColor,
+                    fontSize: 18,
                   ),
                 ),
                 Spacer(),

@@ -1,6 +1,9 @@
+import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Features/Profile/views/edit_profile_view.dart';
-import 'package:e_learning_mobile_app/Features/Profile/views/profile_view.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Splash_Screen/splash_screen.dart';
+import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
+import 'package:e_learning_mobile_app/Features/Profile/profile_view.dart';
 import 'package:e_learning_mobile_app/Features/Transaction/transaction_view.dart';
 import 'package:flutter/material.dart';
 
@@ -16,17 +19,26 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Mulish',
+        fontFamily: AppFonts.Mulish,
         scaffoldBackgroundColor: AppColors.backgraund,
         textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(foregroundColor: AppColors.whiteColor),
+          style: TextButton.styleFrom(foregroundColor: AppColors.blackColor),
         ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.primaryColor,
-          onSurface: AppColors.blackColor,
+          onSurface: AppColors.blackColor, // الديفولت بتاع لون اي تيكت عندنا
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          fillColor: AppColors.whiteColor,
+          filled: true,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide.none,
+          ),
         ),
       ),
-      home: Scaffold(body: EditProfileView()),
+      // home: Scaffold(body: ProfileView()),
+      home: Scaffold(body: LoginScreen()),
     );
   }
 }
