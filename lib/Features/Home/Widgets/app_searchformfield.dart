@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AppTextFormField extends StatelessWidget {
-  const AppTextFormField({
+class AppSearchFormField extends StatelessWidget {
+  const AppSearchFormField({
     super.key,
     required this.title,
     required this.prefix,
@@ -9,16 +9,18 @@ class AppTextFormField extends StatelessWidget {
     this.keyboardType = TextInputType.text,
   });
   final String title;
-  final Icon prefix;
-  final Icon? sufix;
+  final Widget prefix;
+  final Widget? sufix;
   final TextInputType keyboardType;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: keyboardType,
-      decoration: InputDecoration(
+      
+      decoration: InputDecoration(  
         prefixIcon: prefix,
+        suffixIcon: sufix,
         labelText: title,
       ),
     );

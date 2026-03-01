@@ -33,7 +33,7 @@ class MentorItem extends StatelessWidget {
             ),
           ],
         ),
-        Divider(color: AppColors.lightGreenColor),
+        Divider(color: AppColors.lightGrayColor),
       ],
     );
   }

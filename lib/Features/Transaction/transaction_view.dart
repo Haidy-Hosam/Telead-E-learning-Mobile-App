@@ -44,7 +44,7 @@ class _TransactionViewState extends State<TransactionView> {
                     subTitle: 'Web Designer',
                   ),
                   separatorBuilder: (context, index) =>
-                      Divider(color: AppColors.lightGreenColor, thickness: 2),
+                      Divider(color: AppColors.lightGrayColor, thickness: 2),
                 ),
               ),
             ],

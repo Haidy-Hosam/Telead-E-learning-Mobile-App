@@ -65,7 +65,7 @@ class MyCourseItem extends StatelessWidget {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       border: Border.all(
-                                        color: AppColors.lightGreenColor,
+                                        color: AppColors.lightGrayColor,
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(10),
@@ -73,7 +73,7 @@ class MyCourseItem extends StatelessWidget {
                                     child: LinearProgressIndicator(
                                       value: 93 / 125,
                                       backgroundColor:
-                                          AppColors.lightGreenColor,
+                                          AppColors.lightGrayColor,
                                       valueColor: AlwaysStoppedAnimation<Color>(
                                         AppColors.greenColor,
                                       ),

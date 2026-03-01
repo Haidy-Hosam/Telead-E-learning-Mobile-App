@@ -32,7 +32,7 @@ class CustomToggleTabs extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isSelected
                     ? AppColors.greenColor
-                    : AppColors.lightGreenColor,
+                    : AppColors.lightGrayColor,
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Text(

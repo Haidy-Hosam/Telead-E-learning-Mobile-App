@@ -1,16 +1,12 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
-import 'package:e_learning_mobile_app/Features/Auth/Splash_Screen/splash_screen.dart';
-import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
-import 'package:e_learning_mobile_app/Features/Profile/profile_view.dart';
-import 'package:e_learning_mobile_app/Features/Transaction/transaction_view.dart';
+import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Features/Main/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
 }
-
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -26,7 +22,7 @@ class MainApp extends StatelessWidget {
         ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.primaryColor,
-          onSurface: AppColors.blackColor, // الديفولت بتاع لون اي تيكت عندنا
+          onSurface: AppColors.blackColor, // الديفولت بتاع لون اي تيكست عندنا
         ),
         inputDecorationTheme: InputDecorationTheme(
           fillColor: AppColors.whiteColor,
@@ -36,9 +32,21 @@ class MainApp extends StatelessWidget {
             borderSide: BorderSide.none,
           ),
         ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: AppColors.backgraund,
+          selectedItemColor: AppColors.primaryColor,
+          unselectedItemColor: AppColors.gray,
+          // showSelectedLabels: false,
+          selectedLabelStyle: TextStyles.body
+              .copyWith(color: AppColors.primaryColor, fontSize: 12), 
+          unselectedLabelStyle: TextStyles.body
+              .copyWith(color: AppColors.gray, fontSize: 10),
+      ),
       ),
       // home: Scaffold(body: ProfileView()),
-      home: Scaffold(body: LoginScreen()),
+      // home: Scaffold(body: LoginScreen()),
+      home: Scaffold(body: MainAppScreen()),
     );
   }
 }
