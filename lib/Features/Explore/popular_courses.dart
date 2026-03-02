@@ -2,7 +2,7 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
-import 'package:e_learning_mobile_app/Features/Explore/listImag.dart';
+import 'package:e_learning_mobile_app/Features/Explore/listdata/listdata.dart';
 import 'package:e_learning_mobile_app/Features/Explore/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

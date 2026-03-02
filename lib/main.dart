@@ -1,12 +1,13 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Splash_Screen/splash_screen.dart';
+import 'package:e_learning_mobile_app/Features/Explore/single_course_detalis.dart';
+import 'package:e_learning_mobile_app/Features/Explore/top_mentors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
 }
-
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -35,7 +36,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       // home: Scaffold(body: ProfileView()),
-      home: Scaffold(body: SplashScreen()),
+      home: SingleCourseDetalis(),
     );
   }
 }

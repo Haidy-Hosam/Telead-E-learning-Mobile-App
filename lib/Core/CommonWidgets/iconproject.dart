@@ -1,7 +1,10 @@
 class IconsApp {
-  static final String iconSearch = "assets/Icon/search.svg";
-  static final String iconBack = "assets/Icon/back.svg";
-  static final String iconsave = "assets/Icon/save.svg";
-  static final String iconsaveenable = "assets/Icon/enablsaved.svg";
-  static final String iconsearcblack = "assets/Icon/blacksearch.svg";
+  static final String iconSearch = "assets/icons/search.svg";
+  static final String iconBack = "assets/icons/back.svg";
+  static final String iconsave = "assets/icons/save.svg";
+  static final String iconsaveenable = "assets/icons/enablsaved.svg";
+  static final String iconsearcblack = "assets/icons/blacksearch.svg";
+  static final String iconvideo = "assets/icons/Video.svg";
+  static final String iconv = "assets/icons/iconv.svg";
+  static final String iconcloc = "assets/icons/iconcloc.svg";
 }
