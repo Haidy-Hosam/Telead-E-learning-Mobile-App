@@ -10,19 +10,19 @@ class SocialButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox
-    (  width: double.infinity,
+    return SizedBox(
+      width: double.infinity,
 
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(12),
-          backgroundColor:AppColors.backgraund,
+          backgroundColor: AppColors.backgraund,
           shadowColor: Colors.transparent,
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
-      
+
           children: [
             Container(
               width: 50,
@@ -47,11 +47,14 @@ class SocialButton extends StatelessWidget {
                 ),
               ),
             ),
-      
+
             SizedBox(width: 10),
             Text(
               title,
-              style: TextStyles.subtitle.copyWith(color: AppColors.gray , fontSize: 16),
+              style: AppTextStyles.subtitle.copyWith(
+                color: AppColors.gray,
+                fontSize: 16,
+              ),
             ),
           ],
         ),

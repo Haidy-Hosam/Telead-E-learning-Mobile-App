@@ -9,6 +9,7 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -36,7 +37,7 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Let’s Sign In.!",
-                    style: TextStyles.headline.copyWith(fontSize: 25),
+                    style: AppTextStyles.headline.copyWith(fontSize: 25),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -45,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Login to Your Account to Continue your Courses",
-                    style: TextStyles.body.copyWith(
+                    style: AppTextStyles.body.copyWith(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -60,10 +61,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
 
-                AppPassFormField(
-                  title: 'Password',
-                  prefix: const Icon(Icons.lock_outlined),
-                ),
+                AppPassFormField(title: 'Password'),
                 SizedBox(height: 20),
 
                 Row(
@@ -71,7 +69,9 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     RemembermeSqare(),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        pushTo(context, ForgotPassword());
+                      },
                       style: TextButton.styleFrom(padding: EdgeInsets.zero),
                       child: Text('Forgot Password?'),
                     ),
@@ -84,7 +84,7 @@ class LoginScreen extends StatelessWidget {
 
                 Text(
                   "Or Continue With",
-                  style: TextStyles.subtitle.copyWith(
+                  style: AppTextStyles.subtitle.copyWith(
                     color: AppColors.gray,
                     fontSize: 14,
                   ),

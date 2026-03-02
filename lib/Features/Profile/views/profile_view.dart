@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/utils/app_lists.dart';
-import 'package:e_learning_mobile_app/Features/Profile/profile_menu_item.dart';
+import 'package:e_learning_mobile_app/Features/Profile/widgets/profile_menu_item.dart';
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatefulWidget {
@@ -72,7 +72,11 @@ class _ProfileViewState extends State<ProfileView> {
                                     : null,
                                 icon: AppLists.profileIcons[index],
                                 title: AppLists.profileTitles[index],
-                                onTap: () {},
+                                onTap: () {
+                                  if (index == 0) {
+                                    //nav to edit
+                                  }
+                                },
                               ),
                               separatorBuilder: (context, index) =>
                                   SizedBox(height: 36),

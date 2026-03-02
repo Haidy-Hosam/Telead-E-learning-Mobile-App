@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class TextStyles {
+class AppTextStyles {
   static const String fontFamily = "Mulish";
 
   static final TextStyle headline = TextStyle(
     fontSize: 40,
-    fontWeight: FontWeight.w900 ,
+    fontWeight: FontWeight.w900,
     fontFamily: fontFamily,
   );
   static final TextStyle subtitle = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w700 ,
+    fontWeight: FontWeight.w700,
     fontFamily: fontFamily,
   );
 
@@ -22,4 +22,5 @@ class TextStyles {
     fontSize: 14,
     fontFamily: fontFamily,
   );
+ 
 }

@@ -7,19 +7,19 @@ class AuthRedirectText extends StatelessWidget {
   const AuthRedirectText({
     super.key,
     required this.first,
-    required this.sec ,
-    required this.onTap
+    required this.sec,
+    required this.onTap,
   });
 
-final String first;
-final String sec;
-final VoidCallback onTap ;
+  final String first;
+  final String sec;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
         text: first,
-        style: TextStyles.body.copyWith(
+        style: AppTextStyles.body.copyWith(
           color: Colors.black,
           fontSize: 14,
           fontWeight: FontWeight.w700,
@@ -34,10 +34,8 @@ final VoidCallback onTap ;
               decoration: TextDecoration.underline,
               decorationThickness: 2,
             ),
-                        recognizer: TapGestureRecognizer()
-              ..onTap = onTap,
+            recognizer: TapGestureRecognizer()..onTap = onTap,
           ),
-          
         ],
       ),
     );
