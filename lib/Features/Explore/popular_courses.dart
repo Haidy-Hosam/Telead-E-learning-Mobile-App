@@ -61,7 +61,7 @@ class _PopularCoursesState extends State<PopularCourses> {
 
         title: Text(
           "Popular Courses",
-          style: TextStyles.subtitle.copyWith(
+          style: AppTextStyles.subtitle.copyWith(
             fontWeight: FontWeight.w600,
             color: AppColors.blackColor,
           ),
@@ -134,7 +134,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                     child: Text(
                                       maxLines: 1,
                                       Listdata.title[index],
-                                      style: TextStyles.caption.copyWith(
+                                      style: AppTextStyles.caption.copyWith(
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.orange,
                                       ),
@@ -164,7 +164,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                               10.h,
                               Text(
                                 Listdata.nameCorses[index],
-                                style: TextStyles.body.copyWith(
+                                style: AppTextStyles.body.copyWith(
                                   color: AppColors.blackColor,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -175,7 +175,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                   Text(
                                     maxLines: 1,
                                     Listdata.prize[index],
-                                    style: TextStyles.body.copyWith(
+                                    style: AppTextStyles.body.copyWith(
                                       color: AppColors.primaryColor,
                                       fontWeight: FontWeight.w800,
                                     ),
@@ -184,7 +184,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                   Text(
                                     maxLines: 1,
                                     Listdata.prizeprimary[index],
-                                    style: TextStyles.body.copyWith(
+                                    style: AppTextStyles.body.copyWith(
                                       decoration: TextDecoration.lineThrough,
                                       fontSize: 13,
                                       color: AppColors.gray,
@@ -204,7 +204,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                   Text(
                                     maxLines: 1,
                                     Listdata.evaluation[index],
-                                    style: TextStyles.caption.copyWith(
+                                    style: AppTextStyles.caption.copyWith(
                                       fontWeight: FontWeight.w800,
                                     ),
                                   ),
@@ -212,7 +212,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                   Text(
                                     maxLines: 1,
                                     "|",
-                                    style: TextStyles.caption.copyWith(
+                                    style: AppTextStyles.caption.copyWith(
                                       fontWeight: FontWeight.w800,
                                     ),
                                   ),
@@ -220,7 +220,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                   Text(
                                     maxLines: 1,
                                     Listdata.numorder[index],
-                                    style: TextStyles.caption.copyWith(
+                                    style: AppTextStyles.caption.copyWith(
                                       fontWeight: FontWeight.w800,
                                     ),
                                   ),

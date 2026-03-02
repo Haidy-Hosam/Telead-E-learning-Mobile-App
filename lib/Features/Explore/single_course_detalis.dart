@@ -63,7 +63,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                           children: [
                             Text(
                               "Instructor",
-                              style: TextStyles.subtitle.copyWith(
+                              style: AppTextStyles.subtitle.copyWith(
                                 fontWeight: FontWeight.w600,
                               ),
                             ),

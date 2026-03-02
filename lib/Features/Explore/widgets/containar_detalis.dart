@@ -42,7 +42,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                   children: [
                     Text(
                       "Graphic Design",
-                      style: TextStyles.caption.copyWith(
+                      style: AppTextStyles.caption.copyWith(
                         color: AppColors.orange,
                         fontWeight: FontWeight.w700,
                       ),
@@ -55,7 +55,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                     ),
                     Text(
                       "4.2",
-                      style: TextStyles.caption.copyWith(
+                      style: AppTextStyles.caption.copyWith(
                         fontWeight: FontWeight.w800,
                       ),
                     ),
@@ -69,7 +69,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                   children: [
                     Text(
                       "Design Principles: Organizing ..",
-                      style: TextStyles.subtitle,
+                      style:AppTextStyles.subtitle,
                     ),
                   ],
                 ),
@@ -83,7 +83,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                     8.w,
                     Text(
                       "21 Class  |",
-                      style: TextStyles.caption.copyWith(
+                      style: AppTextStyles.caption.copyWith(
                         fontSize: 11,
                         fontWeight: FontWeight.w800,
                       ),
@@ -93,7 +93,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                     8.w,
                     Text(
                       "42 Hours",
-                      style: TextStyles.caption.copyWith(
+                      style: AppTextStyles.caption.copyWith(
                         fontSize: 11,
                         fontWeight: FontWeight.w800,
                       ),
@@ -101,7 +101,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                     Spacer(),
                     Text(
                       "\$28",
-                      style: TextStyles.body.copyWith(
+                      style: AppTextStyles.body.copyWith(
                         color: AppColors.primaryColor,
                         fontWeight: FontWeight.w800,
                       ),
@@ -152,7 +152,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                           17.h,
                           Text(
                             "Graphic Design now a popular profession graphic\ndesign by off your carrer about tantas regiones\nbarbarorum pedibus obiit",
-                            style: TextStyles.caption.copyWith(
+                            style: AppTextStyles.caption.copyWith(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
                             ),
@@ -160,7 +160,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                           15.h,
                           Text(
                             "Graphic Design n a popular profession l Cur tantas regiones barbarorum pedibus obiit, maria transmi Et ne nimium beatus est; Addidisti ad extremum etiam Read More",
-                            style: TextStyles.caption.copyWith(
+                            style: AppTextStyles.caption.copyWith(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
                             ),

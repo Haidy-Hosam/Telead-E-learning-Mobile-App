@@ -31,7 +31,7 @@ class ContainerButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: TextStyles.caption.copyWith(
+            style: AppTextStyles.caption.copyWith(
               fontWeight: FontWeight.w600,
               color: AppColors.blackColor,
             ),

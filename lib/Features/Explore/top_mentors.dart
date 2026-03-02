@@ -47,7 +47,7 @@ class TopMentors extends StatelessWidget {
 
         title: Text(
           "Top Mentors",
-          style: TextStyles.subtitle.copyWith(
+          style: AppTextStyles.subtitle.copyWith(
             fontWeight: FontWeight.w600,
             color: AppColors.blackColor,
             fontFamily: "Mulish",
@@ -84,13 +84,13 @@ class TopMentors extends StatelessWidget {
                           children: [
                             Text(
                               Instractor.name[index],
-                              style: TextStyles.subtitle.copyWith(
+                              style: AppTextStyles.subtitle.copyWith(
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                             Text(
                               Instractor.course[index],
-                              style: TextStyles.body.copyWith(
+                              style: AppTextStyles.body.copyWith(
                                 fontFamily: "Mulish",
                                 fontWeight: FontWeight.w700,
                                 color: AppColors.gray,
