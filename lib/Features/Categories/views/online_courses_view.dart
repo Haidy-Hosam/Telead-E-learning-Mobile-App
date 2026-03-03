@@ -1,3 +1,4 @@
+import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/online_course_item.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/mentor_item.dart';
@@ -15,18 +16,15 @@ class _OnlineCoursesViewState extends State<OnlineCoursesView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBarV1Flutter(
+      //   title: curTab == 0 ? 'Online Courses' : 'Mentors',
+      // ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 32.0),
         child: SafeArea(
           child: Column(
             children: [
-              Row(
-                spacing: 12,
-                children: [
-                  IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-                  Text(curTab == 0 ? 'Online Courses' : 'Mentors'),
-                ],
-              ),
+              AppBarV2Custom(title: curTab == 0 ? 'Online Courses' : 'Mentors'),
               SizedBox(height: 16),
               TextField(
                 decoration: InputDecoration(

@@ -1,7 +1,6 @@
+import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/utils/app_lists.dart';
-import 'package:e_learning_mobile_app/Features/Profile/widgets/profile_menu_item.dart';
 import 'package:flutter/material.dart';
 
 class EditProfileView extends StatefulWidget {
@@ -30,13 +29,8 @@ class _EditProfileViewState extends State<EditProfileView> {
         child: SafeArea(
           child: Column(
             children: [
-              Row(
-                spacing: 12,
-                children: [
-                  IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-                  Text('Edit Profile'),
-                ],
-              ),
+              AppBarV2Custom(title: 'Profile'),
+
               SizedBox(height: 26),
               Center(
                 child: Container(

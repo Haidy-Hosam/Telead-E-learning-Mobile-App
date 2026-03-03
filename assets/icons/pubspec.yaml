@@ -12,7 +12,6 @@ dependencies:
   flutter_svg: ^2.2.3
   pinput: ^6.0.2
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -22,30 +21,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/advertisement_design.jpg
-    - assets/images/Digital Marketing .jpg
-    - assets/images/web.jpg
-    - assets/images/Graphic Design Advan.jpg
-    - assets/images/graphic designer.jpg
-    - assets/icons/search.svg
-    - assets/icons/back.svg
-    - assets/icons/save.svg
-    - assets/icons/enablsaved.svg
-    - assets/icons/blacksearch.svg
-    - assets/images/imageblack.svg
-    - assets/images/blackimage.png
-    - assets/icons/Video.svg
-    - assets/icons/iconv.svg
-    - assets/icons/iconcloc.svg
-    - assets/images/imageinstr.png
-    - assets/icons/massage.svg
-    - assets/icons/book.svg
-    - assets/icons/phone.svg
-    - assets/icons/level.svg
-    - assets/icons/audio.svg
-    - assets/icons/lifitime.svg
-    - assets/icons/quizze.svg
-    - assets/icons/Stroke.svg
+    - assets/icons/
+    - assets/images/
 
   fonts:
     - family: Mulish

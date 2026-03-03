@@ -1,3 +1,4 @@
+import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Features/Transaction/transaction_item.dart';
 import 'package:flutter/material.dart';
@@ -19,22 +20,8 @@ class _TransactionViewState extends State<TransactionView> {
         child: SafeArea(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 12,
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.arrow_back),
-                      ),
-                      Text('Transactions'),
-                    ],
-                  ),
-                  Icon(Icons.search),
-                ],
-              ),
+              AppBarV2Custom(title: 'Transactions', actionFlag: true),
+
               SizedBox(height: 20),
               Expanded(
                 child: ListView.separated(
