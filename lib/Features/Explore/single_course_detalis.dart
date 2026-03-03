@@ -3,6 +3,8 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Features/Explore/listdata/listdatainstractor.dart';
+import 'package:e_learning_mobile_app/Features/Explore/widgets/commentw.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/containar_detalis.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -57,6 +59,8 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                       bottom: 34,
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         25.h,
                         Row(
@@ -68,6 +72,104 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                               ),
                             ),
                           ],
+                        ),
+                        13.h,
+                        Row(
+                          children: [
+                            ClipOval(
+                              child: Image.asset(
+                                AppImages.imageinstractor,
+                                width: 54,
+                                height: 54,
+                              ),
+                            ),
+                            12.w,
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "William S. Cunningha",
+                                  style: AppTextStyles.body.copyWith(
+                                    color: AppColors.blackColor,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                Text(
+                                  "Graphic Design",
+                                  style: AppTextStyles.caption.copyWith(
+                                    color: AppColors.gray,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Spacer(),
+                            SvgPicture.asset(IconsApp.iconmassege),
+                          ],
+                        ),
+                        12.h,
+                        Divider(),
+                        20.h,
+                        Text(
+                          "What You’ll Get",
+                          style: AppTextStyles.body.copyWith(
+                            color: AppColors.blackColor,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        20.h,
+                        SizedBox(
+                          width: double.infinity,
+                          height: 300,
+                          child: ListView.separated(
+                            separatorBuilder: (context, index) {
+                              return 25.h;
+                            },
+                            physics: NeverScrollableScrollPhysics(),
+                            itemCount: 7,
+                            itemBuilder: (context, index) {
+                              return Row(
+                                children: [
+                                  SvgPicture.asset(
+                                    Instractor.icondetalis[index],
+                                  ),
+                                  16.w,
+                                  Text(
+                                    Instractor.name[index],
+                                    style: AppTextStyles.caption.copyWith(
+                                      color: AppColors.gray,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                ],
+                              );
+                            },
+                          ),
+                        ),
+                        Text(
+                          "Reviews",
+                          style: AppTextStyles.body.copyWith(
+                            color: AppColors.blackColor,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        20.h,
+                        Commentw(
+                          image: AppImages.imageinstractor,
+                          name: "William S. Cunningham",
+                          text:
+                              "The Course is Very Good dolor sit amet, consect tur adipiscing elit. Naturales divitias dixit parab les esse, quod parvo",
+                          time: "2 Weeks Agos",
+                          num: "578",
+                        ),
+                        Commentw(
+                          image: AppImages.imageinstractor,
+                          name: "Martha E. Thompson",
+                          text:
+                              "The Course is Very Good dolor sit amet, consect tur adipiscing elit. Naturales divitias dixit parab les esse, quod parvo",
+                          time: "2 Weeks Agos",
+                          num: "578",
                         ),
                       ],
                     ),

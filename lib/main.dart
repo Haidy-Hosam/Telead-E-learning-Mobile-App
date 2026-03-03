@@ -1,6 +1,7 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
+import 'package:e_learning_mobile_app/Features/Explore/single_course_detalis.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,7 +36,7 @@ class MainApp extends StatelessWidget {
       ),
 
       // home: Scaffold(body: ProfileView()),
-      home: Scaffold(body: LoginScreen()),
+      home: SingleCourseDetalis(),
     );
   }
 }

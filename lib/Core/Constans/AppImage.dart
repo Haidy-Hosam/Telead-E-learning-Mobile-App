@@ -13,6 +13,7 @@ class AppImages {
   static const String imageblack = 'assets/images/imageblack.svg';
   static const String blackimage_png = 'assets/images/blackimage.png';
   static const String green_email_svg  = 'assets/icons/green_email.svg';
+    static const String imageinstractor  = 'assets/images/imageinstr.png';
   // static const String t  = 'assets/images/t.png';
 }
  
