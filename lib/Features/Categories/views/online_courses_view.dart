@@ -1,5 +1,6 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
+import 'package:e_learning_mobile_app/Core/CommonWidgets/filed_search.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/online_course_item.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/mentor_item.dart';
 import 'package:flutter/material.dart';
@@ -26,13 +27,9 @@ class _OnlineCoursesViewState extends State<OnlineCoursesView> {
             children: [
               AppBarV2Custom(title: curTab == 0 ? 'Online Courses' : 'Mentors'),
               SizedBox(height: 16),
-              TextField(
-                decoration: InputDecoration(
-                  hint: Text('blablabla'),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
+              FiledSearch(
+                hintText: 'Search for …',
+                iconPath: 'assets/icons/FILTER.svg',
               ),
               SizedBox(height: 25),
               CustomToggleTabs(

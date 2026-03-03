@@ -1,4 +1,5 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class TransactionItem extends StatelessWidget {
@@ -29,8 +30,8 @@ class TransactionItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            Text(title),
-            Text(subTitle),
+            Text(title, style: AppTextStyles.body),
+            Text(subTitle, style: AppTextStyles.caption),
             SizedBox(height: 10),
             Container(
               height: 22,

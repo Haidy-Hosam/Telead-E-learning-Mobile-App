@@ -1,5 +1,6 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
+import 'package:e_learning_mobile_app/Core/CommonWidgets/filed_search.dart';
 import 'package:e_learning_mobile_app/Features/myCourses/widgets/my_courses_item.dart';
 import 'package:flutter/material.dart';
 
@@ -22,13 +23,9 @@ class _MyCoursesViewState extends State<MyCoursesView> {
             children: [
               AppBarV2Custom(title: 'My Courses'),
               SizedBox(height: 16),
-              TextField(
-                decoration: InputDecoration(
-                  hint: Text('blablabla'),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
+              FiledSearch(
+                hintText: 'Search for …',
+                iconPath: 'assets/icons/FILTER.svg',
               ),
               SizedBox(height: 25),
               CustomToggleTabs(

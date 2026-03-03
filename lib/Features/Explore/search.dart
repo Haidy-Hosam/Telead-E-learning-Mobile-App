@@ -2,7 +2,7 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/filed_search.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -48,7 +48,7 @@ class AllCategorySearch extends StatelessWidget {
               hintText: "Search for..",
               iconPath: IconsApp.iconSearch,
             ),
-          30.h,
+            30.h,
 
             Row(
               children: [
@@ -86,15 +86,16 @@ class AllCategorySearch extends StatelessWidget {
             Expanded(
               child: ListView.separated(
                 itemCount: recentSearches.length,
-                separatorBuilder: (context, index) =>
-                    30.h,
+                separatorBuilder: (context, index) => 30.h,
                 itemBuilder: (context, index) {
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         recentSearches[index],
-                        style: AppTextStyles.body.copyWith(color: AppColors.gray),
+                        style: AppTextStyles.body.copyWith(
+                          color: AppColors.gray,
+                        ),
                       ),
                       IconButton(
                         onPressed: () {},

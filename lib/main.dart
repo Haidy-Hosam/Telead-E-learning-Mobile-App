@@ -1,7 +1,11 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Features/Categories/views/online_courses_view.dart';
 
 import 'package:e_learning_mobile_app/Features/Profile/views/edit_profile_view.dart';
+import 'package:e_learning_mobile_app/Features/Profile/views/profile_view.dart';
+import 'package:e_learning_mobile_app/Features/Transaction/transaction_view.dart';
+import 'package:e_learning_mobile_app/Features/myCourses/views/my_courses.dart';
 
 import 'package:flutter/material.dart';
 
@@ -36,7 +40,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
 
-      home: EditProfileView(),
+      home: TransactionView(),
     );
   }
 }
