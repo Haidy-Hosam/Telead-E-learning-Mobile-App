@@ -1,7 +1,7 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Explore/listdata/listdatainstractor.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/commentw.dart';
@@ -40,7 +40,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                 bottomRight: Radius.circular(15),
               ),
             ),
-            child: Image.asset(AppImages.blackimage_png),
+            child: Image.asset(AppImages.blackimagePng),
           ),
           //detalis
           Expanded(

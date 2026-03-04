@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Features/Inbox/inbox_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

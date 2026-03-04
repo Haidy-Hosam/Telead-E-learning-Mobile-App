@@ -1,7 +1,7 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/filed_search.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -44,9 +44,14 @@ class AllCategorySearch extends StatelessWidget {
         ),
         child: Column(
           children: [
-            FiledSearch(
-              hintText: "Search for..",
-              iconPath: IconsApp.iconSearch,
+            Hero(
+              tag: 'search',
+              child: Material(
+                child: FiledSearch(
+                  hintText: "Search for..",
+                  iconPath: IconsApp.iconSearch,
+                ),
+              ),
             ),
             30.h,
 
@@ -93,9 +98,7 @@ class AllCategorySearch extends StatelessWidget {
                     children: [
                       Text(
                         recentSearches[index],
-                        style: TextStyles.body.copyWith(
-                          color: AppColors.gray,
-                        ),
+                        style: TextStyles.body.copyWith(color: AppColors.gray),
                       ),
                       IconButton(
                         onPressed: () {},

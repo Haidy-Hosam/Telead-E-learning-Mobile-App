@@ -1,10 +1,13 @@
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Categories/views/online_courses_view.dart';
-import 'package:e_learning_mobile_app/Features/Explore/popular_courses.dart';
-import 'package:e_learning_mobile_app/Features/Explore/top_mentors.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/mentor_details.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/popular_courses.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/search.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/single_course_detalis.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/top_mentors.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/app_searchformfield.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/poluparcourses_card.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/section_header.dart';
@@ -26,8 +29,11 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+<<<<<<< HEAD
 
               /// HEADER
+=======
+>>>>>>> main
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -49,6 +55,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+<<<<<<< HEAD
 
                   Align(
                     alignment: Alignment.center,
@@ -58,11 +65,15 @@ class HomeScreen extends StatelessWidget {
                       height: 45,
                     ),
                   )
+=======
+                  SvgPicture.asset(AppImages.bellSvg, width: 45, height: 45),
+>>>>>>> main
                 ],
               ),
 
               const SizedBox(height: 30),
 
+<<<<<<< HEAD
               /// SEARCH
               AppSearchFormField(
                 title: 'Search for...',
@@ -70,11 +81,30 @@ class HomeScreen extends StatelessWidget {
                 sufix: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SvgPicture.asset(AppImages.filtter_svg),
+=======
+              GestureDetector(
+                onTap: () {
+                  pushTo(context, AllCategorySearch());
+                },
+                child: Hero(
+                  tag: 'search',
+                  child: Material(
+                    child: AppSearchFormField(
+                      title: 'Search for...',
+                      prefix: Icon(Icons.search, color: AppColors.gray),
+                      sufix: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SvgPicture.asset(AppImages.filtterSvg),
+                      ),
+                    ),
+                  ),
+>>>>>>> main
                 ),
               ),
 
               const SizedBox(height: 30),
 
+<<<<<<< HEAD
               /// OFFER
               Center(
                 child: Image.asset(
@@ -87,6 +117,12 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 30),
 
               /// CATEGORIES
+=======
+              Image.asset(AppImages.offer),
+
+              const SizedBox(height: 30),
+
+>>>>>>> main
               SectionHeader(
                 title: 'Categories',
                 onPressed: () {
@@ -110,7 +146,6 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              /// popular courses
               SectionHeader(
                 title: 'Popular Courses',
                 onPressed: () {
@@ -139,11 +174,18 @@ class HomeScreen extends StatelessWidget {
                 height: 270,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: popularCoursesData.length,
+                  itemCount: popularCoursesDatax.length,
                   itemBuilder: (context, index) {
+<<<<<<< HEAD
                     return Center(
                       child: Padding(
                         padding: const EdgeInsets.only(right: 16),
+=======
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: GestureDetector(
+                        onTap: () => pushTo(context, SingleCourseDetalis()),
+>>>>>>> main
                         child: Poluparcourses(
                           course: popularCoursesDatax[index],
                         ),
@@ -155,7 +197,6 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              /// mentors
               SectionHeader(
                 title: 'Top Mentor',
                 onPressed: () {
@@ -171,7 +212,10 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: mentors.length,
                   itemBuilder: (context, index) {
-                    return _buildTopMentorCard(mentors[index]);
+                    return GestureDetector(
+                      onTap: () => pushTo(context, MentorDetails()),
+                      child: _buildTopMentorCard(mentors[index]),
+                    );
                   },
                 ),
               ),

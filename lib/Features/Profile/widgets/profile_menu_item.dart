@@ -7,12 +7,10 @@ class ProfileMenuItem extends StatelessWidget {
     required this.icon,
     required this.title,
     this.trailing,
-    required this.onTap,
   });
   final IconData icon;
   final String title;
   final Widget? trailing;
-  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {

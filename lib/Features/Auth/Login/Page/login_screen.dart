@@ -1,16 +1,16 @@
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
-import 'package:e_learning_mobile_app/Features/Auth/Login/Widget/RememberMe_sqare.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Login/Widget/remember_me_sqare.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Registure%20Now/registure_now_screen.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_passformfield.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_textformfield.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/auth_redirect_text.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/icon_elevated_button.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
-import 'package:e_learning_mobile_app/Features/Home/Pages/home.dart';
+import 'package:e_learning_mobile_app/Features/Main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -80,9 +80,12 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
 
-                PrimaryButton(title: 'Sign In', onPressed: () {
-                  pushTo(context, HomeScreen());
-                }),
+                PrimaryButton(
+                  title: 'Sign In',
+                  onPressed: () {
+                    pushReplacement(context, MainAppScreen());
+                  },
+                ),
                 SizedBox(height: 10),
 
                 Text(
@@ -108,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                   first: "Don’t have an Account?",
                   sec: ' SIGN UP',
                   onTap: () {
-                    pushReplacement(context, Registure_Now());
+                    pushReplacement(context, RegistureNow());
                   },
                 ),
               ],
