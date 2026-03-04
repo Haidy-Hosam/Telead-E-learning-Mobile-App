@@ -69,7 +69,7 @@ class _PopularCoursesState extends State<PopularCourses> {
 
         title: Text(
           "Popular Courses",
-          style: AppTextStyles.subtitle.copyWith(
+          style: TextStyles.subtitle.copyWith(
             fontWeight: FontWeight.w600,
             color: AppColors.blackColor,
           ),
@@ -184,7 +184,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                       child: Text(
                                         maxLines: 1,
                                         Listdata.title[index],
-                                        style: AppTextStyles.caption.copyWith(
+                                        style: TextStyles.caption.copyWith(
                                           fontWeight: FontWeight.w700,
                                           color: AppColors.orange,
                                         ),
@@ -214,7 +214,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                 10.h,
                                 Text(
                                   Listdata.nameCorses[index],
-                                  style: AppTextStyles.body.copyWith(
+                                  style: TextStyles.body.copyWith(
                                     color: AppColors.blackColor,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -225,7 +225,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                     Text(
                                       maxLines: 1,
                                       Listdata.prize[index],
-                                      style: AppTextStyles.body.copyWith(
+                                      style: TextStyles.body.copyWith(
                                         color: AppColors.primaryColor,
                                         fontWeight: FontWeight.w800,
                                       ),
@@ -234,7 +234,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                     Text(
                                       maxLines: 1,
                                       Listdata.prizeprimary[index],
-                                      style: AppTextStyles.body.copyWith(
+                                      style: TextStyles.body.copyWith(
                                         decoration: TextDecoration.lineThrough,
                                         fontSize: 13,
                                         color: AppColors.gray,
@@ -254,7 +254,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                     Text(
                                       maxLines: 1,
                                       Listdata.evaluation[index],
-                                      style: AppTextStyles.caption.copyWith(
+                                      style: TextStyles.caption.copyWith(
                                         fontWeight: FontWeight.w800,
                                       ),
                                     ),
@@ -262,7 +262,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                     Text(
                                       maxLines: 1,
                                       "|",
-                                      style: AppTextStyles.caption.copyWith(
+                                      style: TextStyles.caption.copyWith(
                                         fontWeight: FontWeight.w800,
                                       ),
                                     ),
@@ -270,7 +270,7 @@ class _PopularCoursesState extends State<PopularCourses> {
                                     Text(
                                       maxLines: 1,
                                       Listdata.numorder[index],
-                                      style: AppTextStyles.caption.copyWith(
+                                      style: TextStyles.caption.copyWith(
                                         fontWeight: FontWeight.w800,
                                       ),
                                     ),

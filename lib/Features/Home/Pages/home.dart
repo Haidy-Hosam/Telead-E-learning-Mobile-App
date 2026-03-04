@@ -93,7 +93,6 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              /// popular courses
               SectionHeader(
                 title: 'Popular Courses',
                 onPressed: () {
@@ -122,11 +121,11 @@ class HomeScreen extends StatelessWidget {
                 height: 270,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: popularCoursesData.length,
+                  itemCount: popularCoursesDatax.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(right: 16),
-                      child: Poluparcourses(course: popularCoursesData[index]),
+                      child: Poluparcourses(course: popularCoursesDatax[index]),
                     );
                   },
                 ),
@@ -134,7 +133,6 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              /// mentors
               SectionHeader(
                 title: 'Top Mentor',
                 onPressed: () {

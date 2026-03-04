@@ -70,7 +70,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                           children: [
                             Text(
                               "Instructor",
-                              style: AppTextStyles.subtitle.copyWith(
+                              style: TextStyles.subtitle.copyWith(
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -93,14 +93,14 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                               children: [
                                 Text(
                                   "William S. Cunningha",
-                                  style: AppTextStyles.body.copyWith(
+                                  style: TextStyles.body.copyWith(
                                     color: AppColors.blackColor,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                                 Text(
                                   "Graphic Design",
-                                  style: AppTextStyles.caption.copyWith(
+                                  style: TextStyles.caption.copyWith(
                                     color: AppColors.gray,
                                     fontWeight: FontWeight.w700,
                                   ),
@@ -116,7 +116,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                         20.h,
                         Text(
                           "What You’ll Get",
-                          style: AppTextStyles.body.copyWith(
+                          style: TextStyles.body.copyWith(
                             color: AppColors.blackColor,
                             fontWeight: FontWeight.w600,
                           ),
@@ -140,7 +140,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                                   16.w,
                                   Text(
                                     Instractor.name[index],
-                                    style: AppTextStyles.caption.copyWith(
+                                    style: TextStyles.caption.copyWith(
                                       color: AppColors.gray,
                                       fontWeight: FontWeight.w700,
                                     ),
@@ -152,7 +152,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                         ),
                         Text(
                           "Reviews",
-                          style: AppTextStyles.body.copyWith(
+                          style: TextStyles.body.copyWith(
                             color: AppColors.blackColor,
                             fontWeight: FontWeight.w600,
                           ),

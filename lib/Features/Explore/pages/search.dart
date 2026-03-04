@@ -32,7 +32,7 @@ class AllCategorySearch extends StatelessWidget {
         ),
         title: Text(
           "Search",
-          style: AppTextStyles.subtitle.copyWith(
+          style: TextStyles.subtitle.copyWith(
             fontWeight: FontWeight.w600,
             color: AppColors.blackColor,
           ),
@@ -57,7 +57,7 @@ class AllCategorySearch extends StatelessWidget {
               children: [
                 Text(
                   "Recents Search",
-                  style: AppTextStyles.subtitle.copyWith(
+                  style: TextStyles.subtitle.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -66,7 +66,7 @@ class AllCategorySearch extends StatelessWidget {
                   onTap: () {},
                   child: Text(
                     "SEE ALL",
-                    style: AppTextStyles.body.copyWith(
+                    style: TextStyles.body.copyWith(
                       fontWeight: FontWeight.w800,
                       color: AppColors.primaryColor,
                     ),
@@ -96,7 +96,7 @@ class AllCategorySearch extends StatelessWidget {
                     children: [
                       Text(
                         recentSearches[index],
-                        style: AppTextStyles.body.copyWith(
+                        style: TextStyles.body.copyWith(
                           color: AppColors.gray,
                         ),
                       ),

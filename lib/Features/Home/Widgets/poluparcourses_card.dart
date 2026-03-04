@@ -58,7 +58,7 @@ class Poluparcourses extends StatelessWidget {
                   children: [
                     Text(
                       course.category,
-                      style: AppTextStyles.body.copyWith(
+                      style: TextStyles.body.copyWith(
                         color: Colors.orange,
                         fontWeight: FontWeight.w600,
                       ),
@@ -76,7 +76,7 @@ class Poluparcourses extends StatelessWidget {
                 /// title
                 Text(
                   course.title,
-                  style:AppTextStyles.body.copyWith(
+                  style:TextStyles.body.copyWith(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
@@ -90,7 +90,7 @@ class Poluparcourses extends StatelessWidget {
 
                     Text(
                       '\$${course.price}',
-                      style:AppTextStyles.body.copyWith(
+                      style:TextStyles.body.copyWith(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
                       ),
@@ -106,7 +106,7 @@ class Poluparcourses extends StatelessWidget {
 
                     Text(
                       course.rating.toString(),
-                      style: AppTextStyles.body,
+                      style: TextStyles.body,
                     ),
 
                     const SizedBox(width: 10),
@@ -115,7 +115,7 @@ class Poluparcourses extends StatelessWidget {
 
                     Text(
                       course.students.toString(),
-                      style:AppTextStyles.body,
+                      style:TextStyles.body,
                     ),
                   ],
                 )

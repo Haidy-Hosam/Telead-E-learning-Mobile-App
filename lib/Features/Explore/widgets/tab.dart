@@ -32,7 +32,7 @@ class ButtonTab extends StatelessWidget {
         children: [
           Text(
             text,
-            style: AppTextStyles.caption.copyWith(
+            style: TextStyles.caption.copyWith(
               color: colorText,
               fontWeight: FontWeight.w700,
             ),

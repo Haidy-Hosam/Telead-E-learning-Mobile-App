@@ -30,7 +30,7 @@ class Sectionplay extends StatelessWidget {
           children: [
             Text(
               name,
-              style: AppTextStyles.caption.copyWith(
+              style: TextStyles.caption.copyWith(
                 fontSize: 16,
                 color: AppColors.blackColor,
                 fontWeight: FontWeight.w700,
@@ -38,7 +38,7 @@ class Sectionplay extends StatelessWidget {
             ),
             Text(
               time,
-              style: AppTextStyles.caption.copyWith(
+              style: TextStyles.caption.copyWith(
                 fontSize: 13,
                 color: AppColors.gray,
                 fontWeight: FontWeight.w700,

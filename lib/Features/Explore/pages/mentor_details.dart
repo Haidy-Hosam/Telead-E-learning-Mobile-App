@@ -69,7 +69,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                 8.h,
                 Text(
                   "Christopher J. Levin",
-                  style: AppTextStyles.subtitle.copyWith(
+                  style: TextStyles.subtitle.copyWith(
                     fontSize: 25,
                     color: AppColors.blackColor,
                     fontWeight: FontWeight.w800,
@@ -77,7 +77,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                 ),
                 Text(
                   "Graphic Designer At Google",
-                  style: AppTextStyles.caption.copyWith(
+                  style: TextStyles.caption.copyWith(
                     color: AppColors.blackColor,
                     fontWeight: FontWeight.w700,
                   ),
@@ -91,7 +91,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                         children: [
                           Text(
                             "26",
-                            style: AppTextStyles.body.copyWith(
+                            style: TextStyles.body.copyWith(
                               color: AppColors.blackColor,
                               fontWeight: FontWeight.w800,
                             ),
@@ -99,7 +99,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                           2.h,
                           Text(
                             "Courses",
-                            style: AppTextStyles.caption.copyWith(
+                            style: TextStyles.caption.copyWith(
                               color: AppColors.blackColor,
                               fontWeight: FontWeight.w700,
                             ),
@@ -111,7 +111,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                         children: [
                           Text(
                             "15800",
-                            style: AppTextStyles.body.copyWith(
+                            style: TextStyles.body.copyWith(
                               color: AppColors.blackColor,
                               fontWeight: FontWeight.w800,
                             ),
@@ -119,7 +119,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                           2.h,
                           Text(
                             "Students",
-                            style: AppTextStyles.caption.copyWith(
+                            style: TextStyles.caption.copyWith(
                               color: AppColors.blackColor,
                               fontWeight: FontWeight.w700,
                             ),
@@ -131,7 +131,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                         children: [
                           Text(
                             "8750",
-                            style: AppTextStyles.body.copyWith(
+                            style: TextStyles.body.copyWith(
                               color: AppColors.blackColor,
                               fontWeight: FontWeight.w800,
                             ),
@@ -139,7 +139,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                           2.h,
                           Text(
                             "Ratings",
-                            style: AppTextStyles.caption.copyWith(
+                            style: TextStyles.caption.copyWith(
                               color: AppColors.blackColor,
                               fontWeight: FontWeight.w700,
                             ),
@@ -208,7 +208,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                         child: Text(
                           textAlign: TextAlign.center,
                           "Sed quanta s alias nunc tantum possitne tanta Nec vero sum nescius esse utilitatem in historia non modo voluptatem.",
-                          style: AppTextStyles.caption.copyWith(
+                          style: TextStyles.caption.copyWith(
                             fontSize: 13,
                             color: AppColors.gray,
                             fontWeight: FontWeight.w700,
@@ -292,7 +292,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                                                   Text(
                                                     maxLines: 1,
                                                     Listdata.title[index],
-                                                    style: AppTextStyles.caption
+                                                    style: TextStyles.caption
                                                         .copyWith(
                                                           fontWeight:
                                                               FontWeight.w700,
@@ -321,7 +321,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                                               Text(
                                                 Listdata.nameCorses[index],
 
-                                                style: AppTextStyles.body
+                                                style: TextStyles.body
                                                     .copyWith(
                                                       color:
                                                           AppColors.blackColor,
@@ -336,7 +336,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                                                   Text(
                                                     maxLines: 1,
                                                     Listdata.prize[index],
-                                                    style: AppTextStyles.body
+                                                    style: TextStyles.body
                                                         .copyWith(
                                                           color: AppColors
                                                               .primaryColor,
@@ -349,7 +349,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                                                     maxLines: 1,
                                                     Listdata
                                                         .prizeprimary[index],
-                                                    style: AppTextStyles.body
+                                                    style: TextStyles.body
                                                         .copyWith(
                                                           decoration:
                                                               TextDecoration
@@ -373,7 +373,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                                                   Text(
                                                     maxLines: 1,
                                                     Listdata.evaluation[index],
-                                                    style: AppTextStyles.caption
+                                                    style: TextStyles.caption
                                                         .copyWith(
                                                           fontWeight:
                                                               FontWeight.w800,
@@ -383,7 +383,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                                                   Text(
                                                     maxLines: 1,
                                                     "|",
-                                                    style: AppTextStyles.caption
+                                                    style: TextStyles.caption
                                                         .copyWith(
                                                           fontWeight:
                                                               FontWeight.w800,
@@ -393,7 +393,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                                                   Text(
                                                     maxLines: 1,
                                                     Listdata.numorder[index],
-                                                    style: AppTextStyles.caption
+                                                    style: TextStyles.caption
                                                         .copyWith(
                                                           fontWeight:
                                                               FontWeight.w800,

@@ -35,7 +35,7 @@ class ButtonContanerProfil extends StatelessWidget {
         children: [
           Text(
             text,
-            style: AppTextStyles.body.copyWith(
+            style: TextStyles.body.copyWith(
               color: colorText,
               fontWeight: FontWeight.w800,
             ),
