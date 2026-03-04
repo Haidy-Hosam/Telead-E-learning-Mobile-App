@@ -10,7 +10,7 @@ import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
-import 'package:e_learning_mobile_app/Features/Home/Pages/home.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Let’s Sign In.!",
-                    style: TextStyles.headline.copyWith(fontSize: 25),
+                    style: AppTextStyles.headline.copyWith(fontSize: 25),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Login to Your Account to Continue your Courses",
-                    style: TextStyles.body.copyWith(
+                    style: AppTextStyles.body.copyWith(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -81,13 +81,13 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 30),
 
                 PrimaryButton(title: 'Sign In', onPressed: () {
-                  pushTo(context, HomeScreen());
+                //  pushTo(context, HomeScreen());
                 }),
                 SizedBox(height: 10),
 
                 Text(
                   "Or Continue With",
-                  style: TextStyles.subtitle.copyWith(
+                  style: AppTextStyles.subtitle.copyWith(
                     color: AppColors.gray,
                     fontSize: 14,
                   ),

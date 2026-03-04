@@ -36,20 +36,10 @@ class MainApp extends StatelessWidget {
             borderSide: BorderSide.none,
           ),
         ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: AppColors.backgraund,
-          selectedItemColor: AppColors.primaryColor,
-          unselectedItemColor: AppColors.gray,
-          // showSelectedLabels: false,
-          selectedLabelStyle: TextStyles.body
-              .copyWith(color: AppColors.primaryColor, fontSize: 12), 
-          unselectedLabelStyle: TextStyles.body
-              .copyWith(color: AppColors.gray, fontSize: 10),
       ),
-      ),
-      // home: Scaffold(body: ProfileView()),
-      home: MainAppScreen(),
+
+      
+      home: MyInbox(),
     );
   }
 }
