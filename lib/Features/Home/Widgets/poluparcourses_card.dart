@@ -28,6 +28,7 @@ class Poluparcourses extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
 
+          /// الصورة
           Container(
             height: 110,
             decoration: BoxDecoration(
@@ -44,19 +45,21 @@ class Poluparcourses extends StatelessWidget {
             ),
           ),
 
+          /// التفاصيل
           Padding(
             padding: const EdgeInsets.all(12),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
+                /// category + bookmark
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       course.category,
                       style: TextStyles.body.copyWith(
-                        color:AppColors.orange,
+                        color: Colors.orange,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -81,6 +84,7 @@ class Poluparcourses extends StatelessWidget {
 
                 const SizedBox(height: 8),
 
+                /// price + rating + students
                 Row(
                   children: [
 

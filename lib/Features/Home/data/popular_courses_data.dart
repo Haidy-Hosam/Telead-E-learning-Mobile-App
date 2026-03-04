@@ -23,7 +23,7 @@ List<PopularCoursesData> popularCoursesData = [
     price: 2,
     rating: 4.2,
     students: 7830,
-    image: "assets/images/course.jpeg",
+    image: "assets/images/course1.png",
   ),
   PopularCoursesData(
     category: "Graphic Design",
@@ -31,7 +31,7 @@ List<PopularCoursesData> popularCoursesData = [
     price: 4,
     rating: 4.2,
     students: 6500,
-    image: "assets/images/course.jpeg",
+    image: "assets/images/course2.png",
   ),
   PopularCoursesData(
     category: "Graphic Design",
@@ -39,7 +39,7 @@ List<PopularCoursesData> popularCoursesData = [
     price: 4,
     rating: 4.2,
     students: 6500,
-    image: "assets/images/course.jpeg",
+    image: "assets/images/course2.png",
   ),
   PopularCoursesData(
     category: "Graphic Design",
@@ -47,6 +47,6 @@ List<PopularCoursesData> popularCoursesData = [
     price: 4,
     rating: 4.2,
     students: 6500,
-    image: "assets/images/course.jpeg",
+    image: "assets/images/course2.png",
   ),
 ];
