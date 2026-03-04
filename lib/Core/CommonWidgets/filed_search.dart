@@ -16,7 +16,7 @@ class FiledSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        hint: Text(hintText, style: AppTextStyles.body),
+        hint: Text(hintText, style: TextStyles.body),
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 10),
           child: SvgPicture.asset(iconPath),

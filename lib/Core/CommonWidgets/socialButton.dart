@@ -51,7 +51,7 @@ class SocialButton extends StatelessWidget {
             SizedBox(width: 10),
             Text(
               title,
-              style: AppTextStyles.subtitle.copyWith(
+              style: TextStyles.subtitle.copyWith(
                 color: AppColors.gray,
                 fontSize: 16,
               ),
