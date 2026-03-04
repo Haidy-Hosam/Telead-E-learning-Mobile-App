@@ -1,3 +1,4 @@
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class ProfileMenuItem extends StatelessWidget {
@@ -18,7 +19,13 @@ class ProfileMenuItem extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Row(spacing: 14, children: [Icon(icon), Text(title)]),
+        Row(
+          spacing: 14,
+          children: [
+            Icon(icon),
+            Text(title, style: AppTextStyles.caption),
+          ],
+        ),
         Row(
           spacing: 15,
           children: [trailing ?? SizedBox(), Icon(Icons.arrow_forward_ios)],

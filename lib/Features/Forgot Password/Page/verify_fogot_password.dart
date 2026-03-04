@@ -3,7 +3,7 @@ import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/create_new_password.dart';
 import 'package:flutter/material.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:pinput/pinput.dart';
 import 'dart:async';
 

@@ -1,4 +1,6 @@
+import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/utils/app_lists.dart';
 import 'package:e_learning_mobile_app/Features/Profile/widgets/profile_menu_item.dart';
 import 'package:flutter/material.dart';
@@ -20,22 +22,8 @@ class _ProfileViewState extends State<ProfileView> {
         child: SafeArea(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 12,
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.arrow_back),
-                      ),
-                      Text('Profile'),
-                    ],
-                  ),
-                  Icon(Icons.search),
-                ],
-              ),
+              AppBarV2Custom(title: 'Profile'),
+
               SizedBox(height: 54),
               Stack(
                 clipBehavior: Clip.none,
@@ -61,14 +49,26 @@ class _ProfileViewState extends State<ProfileView> {
                       child: Column(
                         children: [
                           SizedBox(height: 75),
-                          Text('James S. Hernandez'),
-                          Text('hernandex.redial@gmail.ac.in'),
+                          Text(
+                            'James S. Hernandez',
+                            style: AppTextStyles.subtitle,
+                          ),
+                          Text(
+                            'hernandex.redial@gmail.ac.in',
+                            style: AppTextStyles.caption,
+                          ),
                           SizedBox(height: 26),
                           Expanded(
                             child: ListView.separated(
                               itemBuilder: (context, index) => ProfileMenuItem(
                                 trailing: index == 4
-                                    ? Text('English (US)')
+                                    ? Text(
+                                        'English (US)',
+                                        style: AppTextStyles.caption.copyWith(
+                                          color: AppColors.primaryColor,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      )
                                     : null,
                                 icon: AppLists.profileIcons[index],
                                 title: AppLists.profileTitles[index],
@@ -105,7 +105,7 @@ class _ProfileViewState extends State<ProfileView> {
                           child: Image.network(
                             width: 110,
                             height: 110,
-                            'https://imgs.search.brave.com/bPvYLjMcOtho6DwhZLdC4d2CUG0nDUH7hfS0X_sbKT4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTM1/MDI3ODE4L3Bob3Rv/L3B1dHRpbmctZ3Jl/ZW4tYXQtc3Vuc2V0/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1kMkh6cHFOLXI4/c1VCbk85S2UxbTZh/U2J0V05BN0ZkaFQ4/VjBFbFdmODRBPQ',
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLat8bZvhXD3ChSXyzGsFVh6qgplm1KhYPKA&s',
                             fit: BoxFit.fill,
                           ),
                         ),
