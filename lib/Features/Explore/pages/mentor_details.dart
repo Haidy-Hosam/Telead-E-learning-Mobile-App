@@ -3,8 +3,10 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
+import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 
 import 'package:e_learning_mobile_app/Features/Explore/listdata/listdata.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/single_course_detalis.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/button_contaner_profil.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/commentw.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/container_button.dart';
@@ -254,157 +256,162 @@ class _MentorDetailsState extends State<MentorDetails> {
                               child: ListView.separated(
                                 physics: NeverScrollableScrollPhysics(),
                                 itemBuilder: (context, index) {
-                                  return Padding(
-                                    padding: const EdgeInsets.only(
-                                      right: 20,
-                                      left: 20,
-                                      top: 10,
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          width: 130,
-                                          height: 130,
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              16,
+                                  return GestureDetector(
+                                    onTap: () =>
+                                        pushTo(context, SingleCourseDetalis()),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                        right: 20,
+                                        left: 20,
+                                        top: 10,
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            width: 130,
+                                            height: 130,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(16),
                                             ),
-                                          ),
-                                          child: ClipRRect(
-                                            borderRadius: BorderRadius.circular(
-                                              16,
-                                            ),
-                                            child: Image.asset(
-                                              AppImages.blackimage_png,
-                                            ),
-                                          ),
-                                        ),
-                                        12.w,
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    maxLines: 1,
-                                                    Listdata.title[index],
-                                                    style: TextStyles.caption
-                                                        .copyWith(
-                                                          fontWeight:
-                                                              FontWeight.w700,
-                                                          color:
-                                                              AppColors.orange,
-                                                        ),
-                                                  ),
-                                                  Spacer(),
-                                                  InkWell(
-                                                    onTap: () {
-                                                      setState(() {
-                                                        isSaved[index] =
-                                                            !isSaved[index];
-                                                      });
-                                                    },
-                                                    child: SvgPicture.asset(
-                                                      isSaved[index]
-                                                          ? IconsApp
-                                                                .iconsaveenable
-                                                          : IconsApp.iconsave,
-                                                    ),
-                                                  ),
-                                                ],
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16),
+                                              child: Image.asset(
+                                                AppImages.blackimage_png,
                                               ),
-                                              10.h,
-                                              Text(
-                                                Listdata.nameCorses[index],
+                                            ),
+                                          ),
+                                          12.w,
+                                          Expanded(
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      maxLines: 1,
+                                                      Listdata.title[index],
+                                                      style: TextStyles.caption
+                                                          .copyWith(
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                            color: AppColors
+                                                                .orange,
+                                                          ),
+                                                    ),
+                                                    Spacer(),
+                                                    InkWell(
+                                                      onTap: () {
+                                                        setState(() {
+                                                          isSaved[index] =
+                                                              !isSaved[index];
+                                                        });
+                                                      },
+                                                      child: SvgPicture.asset(
+                                                        isSaved[index]
+                                                            ? IconsApp
+                                                                  .iconsaveenable
+                                                            : IconsApp.iconsave,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                10.h,
+                                                Text(
+                                                  Listdata.nameCorses[index],
 
-                                                style: TextStyles.body
-                                                    .copyWith(
-                                                      color:
-                                                          AppColors.blackColor,
-                                                      fontWeight:
-                                                          FontWeight.w800,
+                                                  style: TextStyles.body
+                                                      .copyWith(
+                                                        color: AppColors
+                                                            .blackColor,
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                      ),
+                                                  maxLines: 1,
+                                                ),
+                                                4.h,
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      maxLines: 1,
+                                                      Listdata.prize[index],
+                                                      style: TextStyles.body
+                                                          .copyWith(
+                                                            color: AppColors
+                                                                .primaryColor,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                          ),
                                                     ),
-                                                maxLines: 1,
-                                              ),
-                                              4.h,
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    maxLines: 1,
-                                                    Listdata.prize[index],
-                                                    style: TextStyles.body
-                                                        .copyWith(
-                                                          color: AppColors
-                                                              .primaryColor,
-                                                          fontWeight:
-                                                              FontWeight.w800,
-                                                        ),
-                                                  ),
-                                                  5.w,
-                                                  Text(
-                                                    maxLines: 1,
-                                                    Listdata
-                                                        .prizeprimary[index],
-                                                    style: TextStyles.body
-                                                        .copyWith(
-                                                          decoration:
-                                                              TextDecoration
-                                                                  .lineThrough,
-                                                          fontSize: 13,
-                                                          color: AppColors.gray,
-                                                          fontWeight:
-                                                              FontWeight.w800,
-                                                        ),
-                                                  ),
-                                                ],
-                                              ),
-                                              5.h,
-                                              Row(
-                                                children: [
-                                                  Icon(
-                                                    Icons.star_outlined,
-                                                    color: Colors.orangeAccent,
-                                                    size: 15,
-                                                  ),
-                                                  Text(
-                                                    maxLines: 1,
-                                                    Listdata.evaluation[index],
-                                                    style: TextStyles.caption
-                                                        .copyWith(
-                                                          fontWeight:
-                                                              FontWeight.w800,
-                                                        ),
-                                                  ),
-                                                  16.w,
-                                                  Text(
-                                                    maxLines: 1,
-                                                    "|",
-                                                    style: TextStyles.caption
-                                                        .copyWith(
-                                                          fontWeight:
-                                                              FontWeight.w800,
-                                                        ),
-                                                  ),
-                                                  16.w,
-                                                  Text(
-                                                    maxLines: 1,
-                                                    Listdata.numorder[index],
-                                                    style: TextStyles.caption
-                                                        .copyWith(
-                                                          fontWeight:
-                                                              FontWeight.w800,
-                                                        ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
+                                                    5.w,
+                                                    Text(
+                                                      maxLines: 1,
+                                                      Listdata
+                                                          .prizeprimary[index],
+                                                      style: TextStyles.body
+                                                          .copyWith(
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .lineThrough,
+                                                            fontSize: 13,
+                                                            color:
+                                                                AppColors.gray,
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                5.h,
+                                                Row(
+                                                  children: [
+                                                    Icon(
+                                                      Icons.star_outlined,
+                                                      color:
+                                                          Colors.orangeAccent,
+                                                      size: 15,
+                                                    ),
+                                                    Text(
+                                                      maxLines: 1,
+                                                      Listdata
+                                                          .evaluation[index],
+                                                      style: TextStyles.caption
+                                                          .copyWith(
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                          ),
+                                                    ),
+                                                    16.w,
+                                                    Text(
+                                                      maxLines: 1,
+                                                      "|",
+                                                      style: TextStyles.caption
+                                                          .copyWith(
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                          ),
+                                                    ),
+                                                    16.w,
+                                                    Text(
+                                                      maxLines: 1,
+                                                      Listdata.numorder[index],
+                                                      style: TextStyles.caption
+                                                          .copyWith(
+                                                            fontWeight:
+                                                                FontWeight.w800,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   );
                                 },

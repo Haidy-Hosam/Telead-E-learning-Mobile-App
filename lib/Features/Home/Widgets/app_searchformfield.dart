@@ -5,7 +5,7 @@ class AppSearchFormField extends StatelessWidget {
     super.key,
     required this.title,
     required this.prefix,
-     this.sufix,
+    this.sufix,
     this.keyboardType = TextInputType.text,
   });
   final String title;
@@ -17,8 +17,9 @@ class AppSearchFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: keyboardType,
-      
-      decoration: InputDecoration(  
+
+      decoration: InputDecoration(
+        enabled: false,
         prefixIcon: prefix,
         suffixIcon: sufix,
         labelText: title,

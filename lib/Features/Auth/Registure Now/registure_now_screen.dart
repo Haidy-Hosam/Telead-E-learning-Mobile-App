@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
-import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Login/Page/login_screen.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_passformfield.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_textformfield.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/auth_redirect_text.dart';
@@ -8,7 +8,7 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
-import 'package:e_learning_mobile_app/Features/Home/Pages/home.dart';
+import 'package:e_learning_mobile_app/Features/Main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -79,10 +79,12 @@ class Registure_Now extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
 
-                PrimaryButton(title: 'Sign Up', onPressed: () {
-                                    pushTo(context, HomeScreen());
-
-                }),
+                PrimaryButton(
+                  title: 'Sign Up',
+                  onPressed: () {
+                    pushReplacement(context, MainAppScreen());
+                  },
+                ),
                 SizedBox(height: 10),
 
                 Text(

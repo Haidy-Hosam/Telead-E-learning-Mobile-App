@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
-import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Login/Page/login_screen.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/auth_redirect_text.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';

@@ -10,7 +10,7 @@ import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
-
+import 'package:e_learning_mobile_app/Features/Main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -80,9 +80,12 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
 
-                PrimaryButton(title: 'Sign In', onPressed: () {
-                //  pushTo(context, HomeScreen());
-                }),
+                PrimaryButton(
+                  title: 'Sign In',
+                  onPressed: () {
+                    pushReplacement(context, MainAppScreen());
+                  },
+                ),
                 SizedBox(height: 10),
 
                 Text(

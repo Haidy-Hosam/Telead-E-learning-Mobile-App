@@ -3,7 +3,10 @@ import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Categories/views/online_courses_view.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/mentor_details.dart';
 import 'package:e_learning_mobile_app/Features/Explore/pages/popular_courses.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/search.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/single_course_detalis.dart';
 import 'package:e_learning_mobile_app/Features/Explore/pages/top_mentors.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/app_searchformfield.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/poluparcourses_card.dart';
@@ -25,7 +28,6 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// header
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -52,24 +54,31 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              /// search
-              AppSearchFormField(
-                title: 'Search for...',
-                prefix: Icon(Icons.search, color: AppColors.gray),
-                sufix: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SvgPicture.asset(AppImages.filtter_svg),
+              GestureDetector(
+                onTap: () {
+                  pushTo(context, AllCategorySearch());
+                },
+                child: Hero(
+                  tag: 'search',
+                  child: Material(
+                    child: AppSearchFormField(
+                      title: 'Search for...',
+                      prefix: Icon(Icons.search, color: AppColors.gray),
+                      sufix: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SvgPicture.asset(AppImages.filtter_svg),
+                      ),
+                    ),
+                  ),
                 ),
               ),
 
               const SizedBox(height: 30),
 
-              /// offer banner
               Image.asset(AppImages.OFFER),
 
               const SizedBox(height: 30),
 
-              /// categories
               SectionHeader(
                 title: 'Categories',
                 onPressed: () {
@@ -125,7 +134,12 @@ class HomeScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(right: 16),
-                      child: Poluparcourses(course: popularCoursesDatax[index]),
+                      child: GestureDetector(
+                        onTap: () => pushTo(context, SingleCourseDetalis()),
+                        child: Poluparcourses(
+                          course: popularCoursesDatax[index],
+                        ),
+                      ),
                     );
                   },
                 ),
@@ -145,7 +159,10 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: mentors.length,
                   itemBuilder: (context, index) {
-                    return _buildTopMentorCard(mentors[index]);
+                    return GestureDetector(
+                      onTap: () => pushTo(context, MentorDetails()),
+                      child: _buildTopMentorCard(mentors[index]),
+                    );
                   },
                 ),
               ),

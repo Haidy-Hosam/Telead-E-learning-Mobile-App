@@ -44,9 +44,14 @@ class AllCategorySearch extends StatelessWidget {
         ),
         child: Column(
           children: [
-            FiledSearch(
-              hintText: "Search for..",
-              iconPath: IconsApp.iconSearch,
+            Hero(
+              tag: 'search',
+              child: Material(
+                child: FiledSearch(
+                  hintText: "Search for..",
+                  iconPath: IconsApp.iconSearch,
+                ),
+              ),
             ),
             30.h,
 
@@ -93,9 +98,7 @@ class AllCategorySearch extends StatelessWidget {
                     children: [
                       Text(
                         recentSearches[index],
-                        style: TextStyles.body.copyWith(
-                          color: AppColors.gray,
-                        ),
+                        style: TextStyles.body.copyWith(color: AppColors.gray),
                       ),
                       IconButton(
                         onPressed: () {},

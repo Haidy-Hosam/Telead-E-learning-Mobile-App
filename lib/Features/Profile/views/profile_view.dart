@@ -1,7 +1,9 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
+import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Core/utils/app_lists.dart';
+import 'package:e_learning_mobile_app/Features/Profile/views/edit_profile_view.dart';
 import 'package:e_learning_mobile_app/Features/Profile/widgets/profile_menu_item.dart';
 import 'package:flutter/material.dart';
 
@@ -60,23 +62,23 @@ class _ProfileViewState extends State<ProfileView> {
                           SizedBox(height: 26),
                           Expanded(
                             child: ListView.separated(
-                              itemBuilder: (context, index) => ProfileMenuItem(
-                                trailing: index == 4
-                                    ? Text(
-                                        'English (US)',
-                                        style: TextStyles.caption.copyWith(
-                                          color: AppColors.primaryColor,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      )
+                              itemBuilder: (context, index) => GestureDetector(
+                                onTap: () => index == 0
+                                    ? pushTo(context, EditProfileView())
                                     : null,
-                                icon: AppLists.profileIcons[index],
-                                title: AppLists.profileTitles[index],
-                                onTap: () {
-                                  if (index == 0) {
-                                    //nav to edit
-                                  }
-                                },
+                                child: ProfileMenuItem(
+                                  trailing: index == 4
+                                      ? Text(
+                                          'English (US)',
+                                          style: TextStyles.caption.copyWith(
+                                            color: AppColors.primaryColor,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        )
+                                      : null,
+                                  icon: AppLists.profileIcons[index],
+                                  title: AppLists.profileTitles[index],
+                                ),
                               ),
                               separatorBuilder: (context, index) =>
                                   SizedBox(height: 36),
