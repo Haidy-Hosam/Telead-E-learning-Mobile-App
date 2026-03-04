@@ -1,6 +1,7 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Features/Explore/pages/mentor_details.dart';
+import 'package:e_learning_mobile_app/Features/Explore/single_course_detalis.dart';
 import 'package:e_learning_mobile_app/Features/Inbox/my_inbox.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
 
-      home: MentorDetails(),
+      home:SingleCourseDetalis (),
     );
   }
 }

@@ -1,7 +1,8 @@
 
 
-import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 
+
+import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
 import 'package:flutter/material.dart';
 
 class ButtonTab extends StatelessWidget {
