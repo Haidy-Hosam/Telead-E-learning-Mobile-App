@@ -1,7 +1,7 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Features/Auth/Login/login_screen.dart';
-import 'package:e_learning_mobile_app/Features/Explore/single_course_detalis.dart';
+import 'package:e_learning_mobile_app/Features/Explore/pages/mentor_details.dart';
+import 'package:e_learning_mobile_app/Features/Inbox/my_inbox.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
         ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.primaryColor,
-          onSurface: AppColors.blackColor, // الديفولت بتاع لون اي تيكت عندنا
+          onSurface: AppColors.blackColor,
         ),
         inputDecorationTheme: InputDecorationTheme(
           fillColor: AppColors.whiteColor,
@@ -35,8 +35,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
 
-      // home: Scaffold(body: ProfileView()),
-      home: SingleCourseDetalis(),
+      home: MentorDetails(),
     );
   }
 }

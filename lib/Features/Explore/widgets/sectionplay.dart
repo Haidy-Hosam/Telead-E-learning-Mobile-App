@@ -1,7 +1,8 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
+
+import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -54,3 +55,4 @@ class Sectionplay extends StatelessWidget {
     );
   }
 }
+
