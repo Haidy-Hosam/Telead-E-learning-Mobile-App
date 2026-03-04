@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_svg_picture.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Features/Home/Pages/home.dart';
 import 'package:e_learning_mobile_app/Features/Inbox/my_inbox.dart';
 import 'package:e_learning_mobile_app/Features/Profile/views/profile_view.dart';
@@ -39,70 +39,70 @@ class _MainAppScreemState extends State<MainAppScreen> {
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              AppImages.home_svg,
+              AppImages.homeSvg,
               colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 0, 0, 0),
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: CustomSvgPicture(
-              path: AppImages.home_svg,
+              path: AppImages.homeSvg,
               color: AppColors.primaryColor,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              AppImages.mycourses_svg,
+              AppImages.mycoursesSvg,
               colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 0, 0, 0),
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: CustomSvgPicture(
-              path: AppImages.mycourses_svg,
+              path: AppImages.mycoursesSvg,
               color: AppColors.primaryColor,
             ),
             label: 'My Courses',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              AppImages.inbox_svg,
+              AppImages.inboxSvg,
               colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 0, 0, 0),
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: CustomSvgPicture(
-              path: AppImages.inbox_svg,
+              path: AppImages.inboxSvg,
               color: AppColors.primaryColor,
             ),
             label: 'Inbox',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              AppImages.transaction_svg,
+              AppImages.transactionSvg,
               colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 0, 0, 0),
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: CustomSvgPicture(
-              path: AppImages.transaction_svg,
+              path: AppImages.transactionSvg,
               color: AppColors.primaryColor,
             ),
             label: 'Transaction',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              AppImages.profile_svg,
+              AppImages.profileSvg,
               colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 0, 0, 0),
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: CustomSvgPicture(
-              path: AppImages.profile_svg,
+              path: AppImages.profileSvg,
               color: AppColors.primaryColor,
             ),
             label: 'Profile',

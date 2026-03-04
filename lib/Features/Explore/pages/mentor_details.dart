@@ -1,7 +1,7 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 
@@ -278,7 +278,7 @@ class _MentorDetailsState extends State<MentorDetails> {
                                               borderRadius:
                                                   BorderRadius.circular(16),
                                               child: Image.asset(
-                                                AppImages.blackimage_png,
+                                                AppImages.blackimagePng,
                                               ),
                                             ),
                                           ),

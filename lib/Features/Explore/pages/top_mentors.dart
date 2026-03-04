@@ -1,11 +1,9 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
-import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Explore/listdata/listdatainstractor.dart';
-import 'package:e_learning_mobile_app/Features/Explore/pages/mentor_details.dart';
 import 'package:e_learning_mobile_app/Features/Explore/pages/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

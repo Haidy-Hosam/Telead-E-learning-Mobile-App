@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 
 

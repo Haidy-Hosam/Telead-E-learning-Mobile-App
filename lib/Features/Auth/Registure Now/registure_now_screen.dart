@@ -5,15 +5,15 @@ import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_textformfield.da
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/auth_redirect_text.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/icon_elevated_button.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Registure_Now extends StatelessWidget {
-  const Registure_Now({super.key});
+class RegistureNow extends StatelessWidget {
+  const RegistureNow({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class Registure_Now extends StatelessWidget {
                 Row(
                   children: [
                     SvgPicture.asset(
-                      AppImages.AgreeIconsvg,
+                      AppImages.agreeIconsvg,
                       width: 24,
                       height: 24,
                     ),

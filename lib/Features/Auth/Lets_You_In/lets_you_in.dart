@@ -2,16 +2,16 @@ import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Login/Page/login_screen.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/auth_redirect_text.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
-import 'package:e_learning_mobile_app/Core/CommonWidgets/socialButton.dart';
+import 'package:e_learning_mobile_app/Core/CommonWidgets/social_button.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Registure%20Now/registure_now_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class LETS_YOU_IN extends StatelessWidget {
-  const LETS_YOU_IN({super.key});
+class LetsYouIn extends StatelessWidget {
+  const LetsYouIn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +76,7 @@ class LETS_YOU_IN extends StatelessWidget {
                   first: "Don’t have an Account?",
                   sec: ' SIGN UP',
                   onTap: () {
-                    pushReplacement(context, Registure_Now());
+                    pushReplacement(context, RegistureNow());
                   },
                 ),
               ),

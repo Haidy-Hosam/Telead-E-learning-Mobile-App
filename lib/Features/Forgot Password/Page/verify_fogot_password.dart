@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/create_new_password.dart';
 import 'package:flutter/material.dart';
@@ -122,7 +122,6 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
               title: 'Verify',
               onPressed: () {
                 if (pinController.text.length == 4) {
-                  print("Code: ${pinController.text}");
                   pushTo(context, CreateNewPassword());
                 }
               },

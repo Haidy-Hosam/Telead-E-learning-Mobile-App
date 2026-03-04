@@ -1,5 +1,5 @@
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Categories/views/online_courses_view.dart';
@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SvgPicture.asset(AppImages.bell_svg, width: 45, height: 45),
+                  SvgPicture.asset(AppImages.bellSvg, width: 45, height: 45),
                 ],
               ),
 
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                       prefix: Icon(Icons.search, color: AppColors.gray),
                       sufix: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: SvgPicture.asset(AppImages.filtter_svg),
+                        child: SvgPicture.asset(AppImages.filtterSvg),
                       ),
                     ),
                   ),
@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              Image.asset(AppImages.OFFER),
+              Image.asset(AppImages.offer),
 
               const SizedBox(height: 30),
 
