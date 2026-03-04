@@ -4,6 +4,7 @@ import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Explore/listdata/listdata.dart';
 import 'package:e_learning_mobile_app/Features/Explore/search.dart';
+import 'package:e_learning_mobile_app/Features/Explore/widgets/tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -72,7 +73,47 @@ class _PopularCoursesState extends State<PopularCourses> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            57.h,
+            25.h,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ButtonTab(
+                    text: "All",
+                    colorContainer: AppColors.greenColor,
+                    colorBorder: AppColors.greenColor,
+                    colorText: AppColors.whiteColor,
+                    w: 58,
+                  ),
+                  12.w,
+                  ButtonTab(
+                    text: "Graphic Design",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
+                    colorText: AppColors.blackColor,
+                    w: 130,
+                  ),
+                  12.w,
+                  ButtonTab(
+                    text: "3D Design",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
+                    colorText: AppColors.blackColor,
+                    w: 104,
+                  ),
+                  12.w,
+                  ButtonTab(
+                    text: "Arts & Humanities",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
+                    colorText: AppColors.blackColor,
+                    w: 154,
+                  ),
+                  12.w,
+                ],
+              ),
+            ),
+            15.h,
             //listview
             Expanded(
               child: ListView.separated(

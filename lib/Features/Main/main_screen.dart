@@ -1,7 +1,11 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_svg_picture.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Features/Explore/popular_courses.dart';
 import 'package:e_learning_mobile_app/Features/Home/Pages/home.dart';
+import 'package:e_learning_mobile_app/Features/Inbox/my_inbox.dart';
+import 'package:e_learning_mobile_app/Features/Profile/views/profile_view.dart';
+import 'package:e_learning_mobile_app/Features/Transaction/transaction_view.dart';
 import 'package:e_learning_mobile_app/Features/myCourses/views/my_courses.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,11 +21,11 @@ class _MainAppScreemState extends State<MainAppScreen> {
   int _currentIndex = 0;
 final List<Widget> _screens = [
   HomeScreen(),
-  // ExploreScreen(),
+  PopularCourses(),
   MyCoursesView(),
-  // FavoritesScreen(),
-  // indox_Screen(),
-  // ProfileView(),
+  TransactionView(),
+  MyInbox(),
+  ProfileView(),
   Center(child: Text('data'),)
 ];
   @override

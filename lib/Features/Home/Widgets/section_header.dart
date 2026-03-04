@@ -1,14 +1,14 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
+import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
+import 'package:e_learning_mobile_app/Features/Categories/views/online_courses_view.dart';
 import 'package:flutter/material.dart';
 
 class SectionHeader extends StatelessWidget {
-  const SectionHeader({
-    super.key,
-    required this.title
-  });
+  const SectionHeader({super.key, required this.title, this.onPressed});
 
-final String title;
+  final String title;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -24,7 +24,8 @@ final String title;
         Row(
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: onPressed
+              ,
               child: Text(
                 "SEE ALL",
                 style: TextStyles.body.copyWith(

@@ -1,8 +1,14 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
+import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
+import 'package:e_learning_mobile_app/Features/Categories/views/online_courses_view.dart';
+import 'package:e_learning_mobile_app/Features/Explore/popular_courses.dart';
+import 'package:e_learning_mobile_app/Features/Explore/top_mentors.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/app_searchformfield.dart';
+import 'package:e_learning_mobile_app/Features/Home/Widgets/poluparcourses_card.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/section_header.dart';
+import 'package:e_learning_mobile_app/Features/Home/data/popular_courses_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -11,90 +17,142 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Hi, Ronald A. Martin',
-                        style: TextStyles.headline.copyWith(
-                          color: AppColors.blackColor,
-                          fontSize: 24,
+    List<String> mentors = ["Sonja", "Jensen", "Victoria", "Castaldo", "Smith"];
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 45),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              /// header
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Hi, Ronald A. Martin',
+                          style: TextStyles.headline.copyWith(
+                            color: AppColors.blackColor,
+                            fontSize: 24,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'What Would you like to learn Today?\nSearch Below.',
-                      ),
-                    ],
+                        Text(
+                          'What Would you like to learn Today?\nSearch Below.',
+                        ),
+                      ],
+                    ),
                   ),
+                  SvgPicture.asset(AppImages.bell_svg, width: 45, height: 45),
+                ],
+              ),
+
+              const SizedBox(height: 30),
+
+              /// search
+              AppSearchFormField(
+                title: 'Search for...',
+                prefix: Icon(Icons.search, color: AppColors.gray),
+                sufix: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SvgPicture.asset(AppImages.filtter_svg),
                 ),
-                SvgPicture.asset(AppImages.bell_svg, width: 45, height: 45),
-              ],
-            ),
-            SizedBox(height: 30),
-            AppSearchFormField(
-              title: 'Search for...',
-              prefix: Icon(Icons.search, color: AppColors.gray),
-              sufix: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SvgPicture.asset(AppImages.filtter_svg),
               ),
-            ),
-            SizedBox(height: 30),
-            Image.asset(AppImages.OFFER),
-            SizedBox(height: 30),
 
-            SectionHeader(title: 'Categories'),
-            SizedBox(height: 20),
-            SizedBox(
-              height: 40,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  _buildCategory("3D Design", false),
-                  _buildCategory("Arts & Humanities", true),
-                  _buildCategory("Graphic Design", false),
-                ],
+              const SizedBox(height: 30),
+
+              /// offer banner
+              Image.asset(AppImages.OFFER),
+
+              const SizedBox(height: 30),
+
+              /// categories
+              SectionHeader(
+                title: 'Categories',
+                onPressed: () {
+                  pushTo(context, OnlineCoursesView());
+                },
               ),
-            ),
-            SizedBox(height: 20),
 
-            SectionHeader(title: 'Polupar Courses'),
-            SizedBox(
-              height: 40,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  _buildPopularCourses("All", false),
-                  _buildPopularCourses("Graphic Design", true),
-                  _buildPopularCourses("3D Design", false),
-                  _buildPopularCourses("Arts & Humanities", false),
-                ],
+              const SizedBox(height: 20),
+
+              SizedBox(
+                height: 40,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    _buildCategory("3D Design", false),
+                    _buildCategory("Arts & Humanities", true),
+                    _buildCategory("Graphic Design", false),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 25),
 
-            SectionHeader(title: 'Top Mentor'),
-            // SizedBox(
-            //   height: 140,
-            //   child: ListView.builder(
-            //     scrollDirection: Axis.horizontal,
-            //     itemCount: mentors.length,
-            //     itemBuilder: (context, index) {
-            //       return _buildTopMentorCard(mentors[index].name);
-            //     },
-            //   ),
-            // ),
-          ],
+              const SizedBox(height: 30),
+
+              /// popular courses
+              SectionHeader(
+                title: 'Popular Courses',
+                onPressed: () {
+                  pushTo(context, PopularCourses());
+                },
+              ),
+
+              const SizedBox(height: 15),
+
+              SizedBox(
+                height: 40,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    _buildPopularCourses("All", false),
+                    _buildPopularCourses("Graphic Design", true),
+                    _buildPopularCourses("3D Design", false),
+                    _buildPopularCourses("Arts & Humanities", false),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              SizedBox(
+                height: 270,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: popularCoursesData.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: Poluparcourses(course: popularCoursesData[index]),
+                    );
+                  },
+                ),
+              ),
+
+              const SizedBox(height: 25),
+
+              /// mentors
+              SectionHeader(
+                title: 'Top Mentor',
+                onPressed: () {
+                  pushTo(context, TopMentors());
+                },
+              ),
+              SizedBox(
+                height: 130,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: mentors.length,
+                  itemBuilder: (context, index) {
+                    return _buildTopMentorCard(mentors[index]);
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -136,25 +194,25 @@ Widget _buildPopularCourses(String text, bool isSelected) {
   );
 }
 
-// Widget _buildTopMentorCard(String name) {
-//   return Padding(
-//     padding: const EdgeInsets.only(right: 16),
-//     child: Column(
-//       children: [
-//         Container(
-//           height: 90,
-//           width: 90,
-//           decoration: BoxDecoration(
-//             color: Colors.black,
-//             borderRadius: BorderRadius.circular(20),
-//           ),
-//         ),
-//         const SizedBox(height: 8),
-//         Text(
-//           name,
-//           style: TextStyles.body.copyWith(fontWeight: FontWeight.w600),
-//         ),
-//       ],
-//     ),
-//   );
-// }
+Widget _buildTopMentorCard(String name) {
+  return Padding(
+    padding: const EdgeInsets.only(right: 16),
+    child: Column(
+      children: [
+        Container(
+          height: 90,
+          width: 90,
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(20),
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          name,
+          style: TextStyles.body.copyWith(fontWeight: FontWeight.w600),
+        ),
+      ],
+    ),
+  );
+}
