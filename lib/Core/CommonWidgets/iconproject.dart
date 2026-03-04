@@ -9,5 +9,5 @@ class IconsApp {
   static final String iconcloc = "assets/icons/iconcloc.svg";
   static final String iconmassege = "assets/icons/massage.svg";
   static final String iconstroke = "assets/icons/Stroke.svg";
-  static final String iconplay = "assets/icons/iconplay.svg";
+  static final String iconplay = "assets/icons/play.svg";
 }

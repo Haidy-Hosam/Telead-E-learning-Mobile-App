@@ -1,8 +1,4 @@
-
-
-
-
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class ButtonTab extends StatelessWidget {
@@ -11,13 +7,14 @@ class ButtonTab extends StatelessWidget {
     required this.text,
     required this.colorContainer,
     required this.colorBorder,
-    required this.colorText, required this.w,
+    required this.colorText,
+    required this.w,
   });
   final String text;
   final Color colorContainer;
   final Color colorBorder;
   final Color colorText;
-  
+
   final double w;
 
   @override

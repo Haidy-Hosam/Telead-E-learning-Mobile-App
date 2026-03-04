@@ -1,8 +1,10 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
+import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/container_button.dart';
+import 'package:e_learning_mobile_app/Features/Explore/widgets/sectionplay.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -69,7 +71,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                   children: [
                     Text(
                       "Design Principles: Organizing ..",
-                      style:AppTextStyles.subtitle,
+                      style: AppTextStyles.subtitle,
                     ),
                   ],
                 ),
@@ -168,7 +170,54 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                         ],
                       ),
                     )
-                  : Text("data"),
+                  : Padding(
+                      padding: const EdgeInsets.only(right: 20.0, left: 20),
+                      child: Column(
+                        children: [
+                          15.h,
+                          Row(
+                            children: [
+                              Text(
+                                "Section 01 - ",
+                                style: AppTextStyles.caption.copyWith(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              Text(
+                                " Introducation",
+                                style: AppTextStyles.caption.copyWith(
+                                  color: AppColors.primaryColor,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              Spacer(),
+                              Text(
+                                "25 Mins",
+                                style: AppTextStyles.caption.copyWith(
+                                  color: AppColors.primaryColor,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                            ],
+                          ),
+                          10.h,
+                          Sectionplay(
+                            name: "Why Using Graphic De..",
+                            number: "01",
+                            time: "15 Mins",
+                          ),
+                          10.h,
+                          Divider(),
+                          PrimaryButton(
+                            title: "Enroll Course - \$55",
+                            onPressed: () {},
+                          ),
+                        ],
+                      ),
+                    ),
             ],
           ),
         ),

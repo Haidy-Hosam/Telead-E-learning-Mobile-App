@@ -2,7 +2,8 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart' show AppTextStyles;
+
 
 import 'package:e_learning_mobile_app/Features/Explore/listdata/listdata.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/button_contaner_profil.dart';
@@ -37,7 +38,7 @@ class _MentorDetailsState extends State<MentorDetails> {
         backgroundColor: AppColors.whiteColor,
 
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {Navigator.pop(context);},
           icon: SvgPicture.asset(IconsApp.iconBack),
           padding: EdgeInsets.all(10),
         ),

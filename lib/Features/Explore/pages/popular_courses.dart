@@ -40,20 +40,12 @@ class _PopularCoursesState extends State<PopularCourses> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => AllCategorySearch()),
-              );
+              pushTo(context, AllCategorySearch());
             },
-            icon: InkWell(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: SvgPicture.asset(
-                IconsApp.iconsearcblack,
-                width: 20,
-                height: 20,
-              ),
+            icon: SvgPicture.asset(
+              IconsApp.iconsearcblack,
+              width: 20,
+              height: 20,
             ),
           ),
           20.w,
@@ -61,7 +53,9 @@ class _PopularCoursesState extends State<PopularCourses> {
 
         leading: IconButton(
           padding: EdgeInsets.all(0),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: SvgPicture.asset(IconsApp.iconBack),
         ),
 
@@ -80,45 +74,47 @@ class _PopularCoursesState extends State<PopularCourses> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            10.h,
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   ButtonTab(
-                    w: 58,
                     text: "All",
-                    colorText: AppColors.backgraund,
-                    colorBorder: AppColors.greenColor,
                     colorContainer: AppColors.greenColor,
+                    colorBorder: AppColors.greenColor,
+                    colorText: AppColors.whiteColor,
+                    w: 58,
                   ),
                   12.w,
                   ButtonTab(
-                    w: 130,
                     text: "Graphic Design",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
                     colorText: AppColors.blackColor,
-                    colorBorder: AppColors.lightBlueBg,
-                    colorContainer: AppColors.lightBlue,
+                    w: 130,
                   ),
                   12.w,
                   ButtonTab(
-                    w: 104,
                     text: "3D Design",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
                     colorText: AppColors.blackColor,
-                    colorBorder: AppColors.lightBlueBg,
-                    colorContainer: AppColors.lightBlue,
+                    w: 104,
                   ),
                   12.w,
                   ButtonTab(
-                    w: 154,
                     text: "Arts & Humanities",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
                     colorText: AppColors.blackColor,
-                    colorBorder: AppColors.lightBlueBg,
-                    colorContainer: AppColors.lightBlue,
+                    w: 154,
                   ),
+                  12.w,
                 ],
               ),
             ),
-            25.h,
+            10.h,
             //listview
             Expanded(
               child: ListView.separated(
