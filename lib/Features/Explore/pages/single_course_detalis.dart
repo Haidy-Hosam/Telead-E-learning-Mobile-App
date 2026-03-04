@@ -1,6 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
@@ -24,9 +23,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
       appBar: AppBar(
         backgroundColor: AppColors.blackColor,
         leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () {},
           icon: SvgPicture.asset(IconsApp.iconBack),
           padding: EdgeInsets.only(left: 35),
         ),
@@ -173,11 +170,6 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                               "The Course is Very Good dolor sit amet, consect tur adipiscing elit. Naturales divitias dixit parab les esse, quod parvo",
                           time: "2 Weeks Agos",
                           num: "578",
-                        ),
-
-                        PrimaryButton(
-                          title: "Enroll Course - \$55",
-                          onPressed: () {},
                         ),
                       ],
                     ),

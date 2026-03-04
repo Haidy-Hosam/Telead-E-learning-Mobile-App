@@ -5,7 +5,6 @@ import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Explore/listdata/listdata.dart';
 import 'package:e_learning_mobile_app/Features/Explore/pages/search.dart';
-import 'package:e_learning_mobile_app/Features/Explore/pages/single_course_detalis.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -45,15 +44,10 @@ class _PopularCoursesState extends State<PopularCourses> {
                 MaterialPageRoute(builder: (context) => AllCategorySearch()),
               );
             },
-            icon: InkWell(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: SvgPicture.asset(
-                IconsApp.iconsearcblack,
-                width: 20,
-                height: 20,
-              ),
+            icon: SvgPicture.asset(
+              IconsApp.iconsearcblack,
+              width: 20,
+              height: 20,
             ),
           ),
           20.w,
@@ -61,7 +55,9 @@ class _PopularCoursesState extends State<PopularCourses> {
 
         leading: IconButton(
           padding: EdgeInsets.all(0),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: SvgPicture.asset(IconsApp.iconBack),
         ),
 
@@ -80,45 +76,47 @@ class _PopularCoursesState extends State<PopularCourses> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            25.h,
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   ButtonTab(
-                    w: 58,
                     text: "All",
-                    colorText: AppColors.backgraund,
-                    colorBorder: AppColors.greenColor,
                     colorContainer: AppColors.greenColor,
+                    colorBorder: AppColors.greenColor,
+                    colorText: AppColors.whiteColor,
+                    w: 58,
                   ),
                   12.w,
                   ButtonTab(
-                    w: 130,
                     text: "Graphic Design",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
                     colorText: AppColors.blackColor,
-                    colorBorder: AppColors.lightBlueBg,
-                    colorContainer: AppColors.lightBlue,
+                    w: 130,
                   ),
                   12.w,
                   ButtonTab(
-                    w: 104,
                     text: "3D Design",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
                     colorText: AppColors.blackColor,
-                    colorBorder: AppColors.lightBlueBg,
-                    colorContainer: AppColors.lightBlue,
+                    w: 104,
                   ),
                   12.w,
                   ButtonTab(
-                    w: 154,
                     text: "Arts & Humanities",
+                    colorContainer: AppColors.lightBlueBg,
+                    colorBorder: AppColors.lightBlue,
                     colorText: AppColors.blackColor,
-                    colorBorder: AppColors.lightBlueBg,
-                    colorContainer: AppColors.lightBlue,
+                    w: 154,
                   ),
+                  12.w,
                 ],
               ),
             ),
-            25.h,
+            15.h,
             //listview
             Expanded(
               child: ListView.separated(
@@ -127,160 +125,155 @@ class _PopularCoursesState extends State<PopularCourses> {
                 },
                 itemCount: Listdata.images.length,
                 itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      pushTo(context, SingleCourseDetalis());
-                    },
-                    child: Container(
-                      height: 150,
-                      decoration: BoxDecoration(
-                        color: AppColors.whiteColor,
-                        borderRadius: BorderRadius.circular(16),
-                        boxShadow: [
-                          BoxShadow(
-                            color: AppColors.blackColor.withValues(alpha: 0.05),
-                            spreadRadius: 0,
-                            blurRadius: 12,
-                            offset: const Offset(0, 6),
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 130,
-                            height: 130,
-                            decoration: BoxDecoration(
-                              color: AppColors.blackColor,
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(16),
-                                bottomLeft: Radius.circular(16),
-                              ),
-                            ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(16),
-                                bottomLeft: Radius.circular(16),
-                              ),
-                              child: Image.asset(
-                                Listdata.images[index],
-                                width: 130,
-                                height: 130,
-                                fit: BoxFit.cover,
-                              ),
+                  return Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      color: AppColors.whiteColor,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.blackColor.withValues(alpha: 0.05),
+                          spreadRadius: 0,
+                          blurRadius: 12,
+                          offset: const Offset(0, 6),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 130,
+                          height: 130,
+                          decoration: BoxDecoration(
+                            color: AppColors.blackColor,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(16),
+                              bottomLeft: Radius.circular(16),
                             ),
                           ),
-                          14.w,
-                          Expanded(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 15),
-                                      child: Text(
-                                        maxLines: 1,
-                                        Listdata.title[index],
-                                        style: TextStyles.caption.copyWith(
-                                          fontWeight: FontWeight.w700,
-                                          color: AppColors.orange,
-                                        ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(16),
+                              bottomLeft: Radius.circular(16),
+                            ),
+                            child: Image.asset(
+                              Listdata.images[index],
+                              width: 130,
+                              height: 130,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        14.w,
+                        Expanded(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 15),
+                                    child: Text(
+                                      maxLines: 1,
+                                      Listdata.title[index],
+                                      style: TextStyles.caption.copyWith(
+                                        fontWeight: FontWeight.w700,
+                                        color: AppColors.orange,
                                       ),
                                     ),
-                                    Spacer(),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                        right: 20,
-                                        top: 15,
-                                      ),
-                                      child: InkWell(
-                                        onTap: () {
-                                          setState(() {
-                                            isSaved[index] = !isSaved[index];
-                                          });
-                                        },
-                                        child: SvgPicture.asset(
-                                          isSaved[index]
-                                              ? IconsApp.iconsaveenable
-                                              : IconsApp.iconsave,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                10.h,
-                                Text(
-                                  Listdata.nameCorses[index],
-                                  style: TextStyles.body.copyWith(
-                                    color: AppColors.blackColor,
-                                    fontWeight: FontWeight.w600,
                                   ),
+                                  Spacer(),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      right: 20,
+                                      top: 15,
+                                    ),
+                                    child: InkWell(
+                                      onTap: () {
+                                        setState(() {
+                                          isSaved[index] = !isSaved[index];
+                                        });
+                                      },
+                                      child: SvgPicture.asset(
+                                        isSaved[index]
+                                            ? IconsApp.iconsaveenable
+                                            : IconsApp.iconsave,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              10.h,
+                              Text(
+                                Listdata.nameCorses[index],
+                                style: TextStyles.body.copyWith(
+                                  color: AppColors.blackColor,
+                                  fontWeight: FontWeight.w600,
                                 ),
-                                4.h,
-                                Row(
-                                  children: [
-                                    Text(
-                                      maxLines: 1,
-                                      Listdata.prize[index],
-                                      style: TextStyles.body.copyWith(
-                                        color: AppColors.primaryColor,
-                                        fontWeight: FontWeight.w800,
-                                      ),
+                              ),
+                              4.h,
+                              Row(
+                                children: [
+                                  Text(
+                                    maxLines: 1,
+                                    Listdata.prize[index],
+                                    style: TextStyles.body.copyWith(
+                                      color: AppColors.primaryColor,
+                                      fontWeight: FontWeight.w800,
                                     ),
-                                    5.w,
-                                    Text(
-                                      maxLines: 1,
-                                      Listdata.prizeprimary[index],
-                                      style: TextStyles.body.copyWith(
-                                        decoration: TextDecoration.lineThrough,
-                                        fontSize: 13,
-                                        color: AppColors.gray,
-                                        fontWeight: FontWeight.w800,
-                                      ),
+                                  ),
+                                  5.w,
+                                  Text(
+                                    maxLines: 1,
+                                    Listdata.prizeprimary[index],
+                                    style: TextStyles.body.copyWith(
+                                      decoration: TextDecoration.lineThrough,
+                                      fontSize: 13,
+                                      color: AppColors.gray,
+                                      fontWeight: FontWeight.w800,
                                     ),
-                                  ],
-                                ),
-                                5.h,
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.star_outlined,
-                                      color: Colors.orangeAccent,
-                                      size: 15,
+                                  ),
+                                ],
+                              ),
+                              5.h,
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.star_outlined,
+                                    color: Colors.orangeAccent,
+                                    size: 15,
+                                  ),
+                                  Text(
+                                    maxLines: 1,
+                                    Listdata.evaluation[index],
+                                    style: TextStyles.caption.copyWith(
+                                      fontWeight: FontWeight.w800,
                                     ),
-                                    Text(
-                                      maxLines: 1,
-                                      Listdata.evaluation[index],
-                                      style: TextStyles.caption.copyWith(
-                                        fontWeight: FontWeight.w800,
-                                      ),
+                                  ),
+                                  16.w,
+                                  Text(
+                                    maxLines: 1,
+                                    "|",
+                                    style: TextStyles.caption.copyWith(
+                                      fontWeight: FontWeight.w800,
                                     ),
-                                    16.w,
-                                    Text(
-                                      maxLines: 1,
-                                      "|",
-                                      style: TextStyles.caption.copyWith(
-                                        fontWeight: FontWeight.w800,
-                                      ),
+                                  ),
+                                  16.w,
+                                  Text(
+                                    maxLines: 1,
+                                    Listdata.numorder[index],
+                                    style: TextStyles.caption.copyWith(
+                                      fontWeight: FontWeight.w800,
                                     ),
-                                    16.w,
-                                    Text(
-                                      maxLines: 1,
-                                      Listdata.numorder[index],
-                                      style: TextStyles.caption.copyWith(
-                                        fontWeight: FontWeight.w800,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   );
                 },

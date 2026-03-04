@@ -3,7 +3,6 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/filed_search.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -25,9 +24,7 @@ class AllCategorySearch extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           padding: const EdgeInsets.only(left: 25),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () {},
           icon: SvgPicture.asset(IconsApp.iconBack),
         ),
         title: Text(
