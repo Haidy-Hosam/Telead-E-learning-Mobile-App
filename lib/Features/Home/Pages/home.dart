@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> mentors = ["Sonja", "Jensen", "Victoria", "Castaldo", "Smith"];
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -25,7 +26,8 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// header
+
+              /// HEADER
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -40,19 +42,28 @@ class HomeScreen extends StatelessWidget {
                             fontSize: 24,
                           ),
                         ),
-                        Text(
+                        const SizedBox(height: 4),
+                        const Text(
                           'What Would you like to learn Today?\nSearch Below.',
                         ),
                       ],
                     ),
                   ),
-                  SvgPicture.asset(AppImages.bell_svg, width: 45, height: 45),
+
+                  Align(
+                    alignment: Alignment.center,
+                    child: SvgPicture.asset(
+                      AppImages.bell_svg,
+                      width: 45,
+                      height: 45,
+                    ),
+                  )
                 ],
               ),
 
               const SizedBox(height: 30),
 
-              /// search
+              /// SEARCH
               AppSearchFormField(
                 title: 'Search for...',
                 prefix: Icon(Icons.search, color: AppColors.gray),
@@ -64,12 +75,18 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              /// offer banner
-              Image.asset(AppImages.OFFER),
+              /// OFFER
+              Center(
+                child: Image.asset(
+                  AppImages.OFFER,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
 
               const SizedBox(height: 30),
 
-              /// categories
+              /// CATEGORIES
               SectionHeader(
                 title: 'Categories',
                 onPressed: () {
@@ -124,9 +141,13 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: popularCoursesData.length,
                   itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 16),
-                      child: Poluparcourses(course: popularCoursesData[index]),
+                    return Center(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 16),
+                        child: Poluparcourses(
+                          course: popularCoursesDatax[index],
+                        ),
+                      ),
                     );
                   },
                 ),
@@ -141,6 +162,9 @@ class HomeScreen extends StatelessWidget {
                   pushTo(context, TopMentors());
                 },
               ),
+
+              const SizedBox(height: 10),
+
               SizedBox(
                 height: 130,
                 child: ListView.builder(
@@ -210,7 +234,9 @@ Widget _buildTopMentorCard(String name) {
         const SizedBox(height: 8),
         Text(
           name,
-          style: TextStyles.body.copyWith(fontWeight: FontWeight.w600),
+          style: TextStyles.body.copyWith(
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ],
     ),
