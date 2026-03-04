@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_passformfield.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/verify_fogot_password.dart';
@@ -23,7 +23,7 @@ class CreateNewPassword extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Create Your New Password',
@@ -36,9 +36,9 @@ class CreateNewPassword extends StatelessWidget {
             ),
             SizedBox(height: 20),
             AppPassFormField(title: 'Password'),
-            SizedBox(height:25),
+            SizedBox(height: 25),
             AppPassFormField(title: 'Password'),
-        
+
             SizedBox(height: 50),
             PrimaryButton(
               title: 'Continue',

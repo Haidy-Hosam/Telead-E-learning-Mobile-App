@@ -1,4 +1,5 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class MentorItem extends StatelessWidget {
@@ -27,7 +28,21 @@ class MentorItem extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 14.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text('Sayed-Abd-Elaziz'), Text('3D Design')],
+                  children: [
+                    Text(
+                      'Sayed-Abd-Elaziz',
+                      style: TextStyles.body.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      '3D Design',
+                      style: TextStyles.caption.copyWith(
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.gray,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

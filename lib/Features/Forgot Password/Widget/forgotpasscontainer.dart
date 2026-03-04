@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -30,15 +30,11 @@ class Forgotpasscontainer extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyles.body.copyWith(
-                  color: AppColors.gray,
-                ),
+                style: TextStyles.body.copyWith(color: AppColors.gray),
               ),
               Text(
                 subtitle,
-                style: TextStyles.body.copyWith(
-                  fontWeight: FontWeight.w600,
-                ),
+                style: TextStyles.body.copyWith(fontWeight: FontWeight.w600),
               ),
             ],
           ),

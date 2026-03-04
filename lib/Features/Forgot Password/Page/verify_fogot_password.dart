@@ -3,7 +3,7 @@ import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/create_new_password.dart';
 import 'package:flutter/material.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:pinput/pinput.dart';
 import 'dart:async';
 
@@ -109,9 +109,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
             secondsRemaining > 0
                 ? Text(
                     "Resend Code in ${secondsRemaining}s",
-                    style: TextStyles.body.copyWith(
-                      color: AppColors.gray,
-                    ),
+                    style: TextStyles.body.copyWith(color: AppColors.gray),
                   )
                 : TextButton(
                     onPressed: startTimer,
@@ -156,8 +154,10 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
                 onPressed: () {
                   if (pinController.text.isNotEmpty) {
                     setState(() {
-                      pinController.text = pinController.text
-                          .substring(0, pinController.text.length - 1);
+                      pinController.text = pinController.text.substring(
+                        0,
+                        pinController.text.length - 1,
+                      );
                     });
                   }
                 },
@@ -172,11 +172,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
 
   Widget _numberRow(int a, int b, int c) {
     return Row(
-      children: [
-        _numberButton(a),
-        _numberButton(b),
-        _numberButton(c),
-      ],
+      children: [_numberButton(a), _numberButton(b), _numberButton(c)],
     );
   }
 
@@ -195,10 +191,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
           alignment: Alignment.center,
           child: Text(
             "$number",
-            style: const TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.w600,
-            ),
+            style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
           ),
         ),
       ),

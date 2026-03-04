@@ -1,3 +1,4 @@
+import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
 import 'package:e_learning_mobile_app/Features/Inbox/inbox_item.dart';
@@ -21,22 +22,7 @@ class _MyInboxState extends State<MyInbox> {
         child: SafeArea(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 12,
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.arrow_back),
-                      ),
-                      Text('Inbox'),
-                    ],
-                  ),
-                  Icon(Icons.search),
-                ],
-              ),
+              AppBarV2Custom(title: 'Inbox', actionFlag: true),
               SizedBox(height: 16),
               CustomToggleTabs(
                 curTab: curTab,

@@ -8,7 +8,7 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/icon_elevated_button.da
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -61,9 +61,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
 
-                AppPassFormField(
-                  title: 'Password',
-                ),
+                AppPassFormField(title: 'Password'),
                 SizedBox(height: 20),
 
                 Row(

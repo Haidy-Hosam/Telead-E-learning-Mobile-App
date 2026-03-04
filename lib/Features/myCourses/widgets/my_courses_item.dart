@@ -1,4 +1,6 @@
+import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -45,9 +47,55 @@ class MyCourseItem extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Graphic Design'),
-                      Text('Graphic Design Advanced'),
-                      Text('⭐ 4.2  |  3 Hrs 06 Mins'),
+                      Text(
+                        'Graphic Design',
+                        style: TextStyles.caption.copyWith(
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.orange,
+                        ),
+                      ),
+                      Text(
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        'Graphic Design Advanced',
+                        style: TextStyles.body.copyWith(
+                          color: AppColors.blackColor,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.star_outlined,
+                            color: Colors.orangeAccent,
+                            size: 15,
+                          ),
+                          Text(
+                            maxLines: 1,
+                            '4.2',
+                            style: TextStyles.caption.copyWith(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          16.w,
+                          Text(
+                            maxLines: 1,
+                            "|",
+                            style: TextStyles.caption.copyWith(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          16.w,
+                          Text(
+                            maxLines: 1,
+                            '3 Hrs 06 Mins',
+                            style: TextStyles.caption.copyWith(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ],
+                      ),
+
                       completed
                           ? Align(
                               alignment: Alignment.centerRight,

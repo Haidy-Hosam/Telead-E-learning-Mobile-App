@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/verify_fogot_password.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Widget/forgotpasscontainer.dart';
@@ -35,13 +35,22 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Forgotpasscontainer(title: 'Via Email', subtitle: 'priscilla.frank26@gmail.com',),
-              SizedBox(height: 15,),
-              Forgotpasscontainer(title: 'Via SMS', subtitle: '( +1 ) 480-894-5529',),
-              SizedBox(height: 50,),
-              PrimaryButton(title: 'Continue', onPressed: () {
-                pushTo(context, VerifyFogotPassword());
-              },),
+              Forgotpasscontainer(
+                title: 'Via Email',
+                subtitle: 'priscilla.frank26@gmail.com',
+              ),
+              SizedBox(height: 15),
+              Forgotpasscontainer(
+                title: 'Via SMS',
+                subtitle: '( +1 ) 480-894-5529',
+              ),
+              SizedBox(height: 50),
+              PrimaryButton(
+                title: 'Continue',
+                onPressed: () {
+                  pushTo(context, VerifyFogotPassword());
+                },
+              ),
             ],
           ),
         ),

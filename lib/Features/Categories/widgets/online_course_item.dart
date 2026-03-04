@@ -1,8 +1,12 @@
+import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class OnlineCourseItem extends StatelessWidget {
-  const OnlineCourseItem({super.key});
+  const OnlineCourseItem({super.key, required this.icon, this.onTap});
+  final void Function()? onTap;
+  final Widget icon;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +31,7 @@ class OnlineCourseItem extends StatelessWidget {
             child: Image.network(
               width: 130,
               height: 130,
-              'https://imgs.search.brave.com/bPvYLjMcOtho6DwhZLdC4d2CUG0nDUH7hfS0X_sbKT4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTM1/MDI3ODE4L3Bob3Rv/L3B1dHRpbmctZ3Jl/ZW4tYXQtc3Vuc2V0/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1kMkh6cHFOLXI4/c1VCbk85S2UxbTZh/U2J0V05BN0ZkaFQ4/VjBFbFdmODRBPQ',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLat8bZvhXD3ChSXyzGsFVh6qgplm1KhYPKA&s',
               fit: BoxFit.fill,
             ),
           ),
@@ -40,23 +44,79 @@ class OnlineCourseItem extends StatelessWidget {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Graphic Design'), Icon(Icons.bookmark)],
+                    children: [
+                      Text(
+                        'Graphic Design',
+                        style: TextStyles.caption.copyWith(
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.orange,
+                        ),
+                      ),
+                      GestureDetector(onTap: onTap, child: icon),
+                    ],
                   ),
-                  Text('Graphic Design Advanced'),
+                  Text(
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    'Graphic Design Advanced',
+                    style: TextStyles.body.copyWith(
+                      color: AppColors.blackColor,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                   Row(
                     spacing: 5,
                     children: [
-                      Text('\$28'),
+                      Text(
+                        '\$28',
+                        style: TextStyles.body.copyWith(
+                          color: AppColors.primaryColor,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
                       Text(
                         '\$42',
-                        style: TextStyle(
-                          decorationThickness: 1,
+                        style: TextStyles.body.copyWith(
                           decoration: TextDecoration.lineThrough,
+                          fontSize: 13,
+                          color: AppColors.gray,
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
                     ],
                   ),
-                  Text('⭐ 4.2  |  7830 Std'),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.star_outlined,
+                        color: Colors.orangeAccent,
+                        size: 15,
+                      ),
+                      Text(
+                        maxLines: 1,
+                        '4.2',
+                        style: TextStyles.caption.copyWith(
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      16.w,
+                      Text(
+                        maxLines: 1,
+                        "|",
+                        style: TextStyles.caption.copyWith(
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      16.w,
+                      Text(
+                        maxLines: 1,
+                        '7830 Std',
+                        style: TextStyles.caption.copyWith(
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

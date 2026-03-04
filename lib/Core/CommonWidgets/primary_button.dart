@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
@@ -20,7 +20,6 @@ class PrimaryButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: EdgeInsets.symmetric(horizontal: 12),
         backgroundColor: AppColors.primaryColor,
-        disabledBackgroundColor: Colors.grey,
         minimumSize: const Size(double.infinity, 60),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
       ),
@@ -32,9 +31,8 @@ class PrimaryButton extends StatelessWidget {
                 SizedBox(width: 10),
                 Text(
                   title,
-                  style: TextStyles.subtitle.copyWith(
+                  style: AppTextStyles.subtitle.copyWith(
                     color: AppColors.whiteColor,
-                    fontSize: 18,
                   ),
                 ),
                 Spacer(),
@@ -62,7 +60,7 @@ class PrimaryButton extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     title,
-                    style: TextStyles.subtitle.copyWith(
+                    style: AppTextStyles.subtitle.copyWith(
                       color: AppColors.whiteColor,
                     ),
                   ),

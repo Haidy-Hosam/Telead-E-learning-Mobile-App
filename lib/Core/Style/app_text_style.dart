@@ -5,12 +5,12 @@ class TextStyles {
 
   static final TextStyle headline = TextStyle(
     fontSize: 40,
-    fontWeight: FontWeight.w900 ,
+    fontWeight: FontWeight.w900,
     fontFamily: fontFamily,
   );
   static final TextStyle subtitle = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w700 ,
+    fontWeight: FontWeight.w700,
     fontFamily: fontFamily,
   );
 
@@ -18,4 +18,9 @@ class TextStyles {
     fontSize: 16,
     fontFamily: fontFamily,
   );
+    static const TextStyle caption = TextStyle(
+    fontSize: 14,
+    fontFamily: fontFamily,
+  );
+ 
 }

@@ -4,7 +4,7 @@ import 'package:e_learning_mobile_app/Features/Auth/Widgets/auth_redirect_text.d
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/socialButton.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Registure%20Now/registure_now_screen.dart';
 import 'package:flutter/material.dart';

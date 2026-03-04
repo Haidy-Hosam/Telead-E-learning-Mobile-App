@@ -1,6 +1,6 @@
 import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
 import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Core/Style/textstyle.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/app_searchformfield.dart';
 import 'package:e_learning_mobile_app/Features/Home/Widgets/section_header.dart';
 import 'package:flutter/material.dart';
