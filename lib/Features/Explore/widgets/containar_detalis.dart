@@ -1,7 +1,6 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/container_button.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/sectionplay.dart';
@@ -44,7 +43,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                   children: [
                     Text(
                       "Graphic Design",
-                      style: AppTextStyles.caption.copyWith(
+                      style: TextStyles.caption.copyWith(
                         color: AppColors.orange,
                         fontWeight: FontWeight.w700,
                       ),
@@ -57,7 +56,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                     ),
                     Text(
                       "4.2",
-                      style: AppTextStyles.caption.copyWith(
+                      style: TextStyles.caption.copyWith(
                         fontWeight: FontWeight.w800,
                       ),
                     ),
@@ -71,7 +70,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                   children: [
                     Text(
                       "Design Principles: Organizing ..",
-                      style: AppTextStyles.subtitle,
+                      style:TextStyles.subtitle,
                     ),
                   ],
                 ),
@@ -85,7 +84,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                     8.w,
                     Text(
                       "21 Class  |",
-                      style: AppTextStyles.caption.copyWith(
+                      style: TextStyles.caption.copyWith(
                         fontSize: 11,
                         fontWeight: FontWeight.w800,
                       ),
@@ -95,7 +94,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                     8.w,
                     Text(
                       "42 Hours",
-                      style: AppTextStyles.caption.copyWith(
+                      style: TextStyles.caption.copyWith(
                         fontSize: 11,
                         fontWeight: FontWeight.w800,
                       ),
@@ -103,7 +102,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                     Spacer(),
                     Text(
                       "\$28",
-                      style: AppTextStyles.body.copyWith(
+                      style: TextStyles.body.copyWith(
                         color: AppColors.primaryColor,
                         fontWeight: FontWeight.w800,
                       ),
@@ -154,7 +153,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                           17.h,
                           Text(
                             "Graphic Design now a popular profession graphic\ndesign by off your carrer about tantas regiones\nbarbarorum pedibus obiit",
-                            style: AppTextStyles.caption.copyWith(
+                            style: TextStyles.caption.copyWith(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
                             ),
@@ -162,7 +161,7 @@ class _ContainarDetalisState extends State<ContainarDetalis> {
                           15.h,
                           Text(
                             "Graphic Design n a popular profession l Cur tantas regiones barbarorum pedibus obiit, maria transmi Et ne nimium beatus est; Addidisti ad extremum etiam Read More",
-                            style: AppTextStyles.caption.copyWith(
+                            style: TextStyles.caption.copyWith(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
                             ),

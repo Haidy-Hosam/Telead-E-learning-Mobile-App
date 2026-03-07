@@ -26,7 +26,7 @@ class AppBarV2Custom extends StatelessWidget {
               icon: const Icon(Icons.arrow_back),
             ),
             SizedBox(width: 12),
-            Text(title, style: AppTextStyles.headline.copyWith(fontSize: 21)),
+            Text(title, style: TextStyles.headline.copyWith(fontSize: 21)),
           ],
         ),
         if (actionFlag)

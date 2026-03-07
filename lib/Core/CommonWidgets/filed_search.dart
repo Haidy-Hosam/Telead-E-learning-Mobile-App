@@ -1,4 +1,4 @@
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,7 +16,7 @@ class FiledSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        hint: Text(hintText, style: AppTextStyles.body),
+        hint: Text(hintText, style: TextStyles.body),
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 10),
           child: SvgPicture.asset(iconPath),

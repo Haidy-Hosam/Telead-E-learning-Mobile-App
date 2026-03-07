@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/create_new_password.dart';
 import 'package:flutter/material.dart';
@@ -72,7 +72,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
         ),
         title: Text(
           'Forgot Password',
-          style: AppTextStyles.headline.copyWith(fontSize: 21),
+          style: TextStyles.headline.copyWith(fontSize: 21),
         ),
       ),
       body: Padding(
@@ -83,7 +83,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
             Text(
               'Code has been Send to ( +1 ) ***-***-*529',
               textAlign: TextAlign.center,
-              style: AppTextStyles.body.copyWith(
+              style: TextStyles.body.copyWith(
                 color: AppColors.gray,
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
@@ -109,7 +109,7 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
             secondsRemaining > 0
                 ? Text(
                     "Resend Code in ${secondsRemaining}s",
-                    style: AppTextStyles.body.copyWith(color: AppColors.gray),
+                    style: TextStyles.body.copyWith(color: AppColors.gray),
                   )
                 : TextButton(
                     onPressed: startTimer,
@@ -122,7 +122,6 @@ class _VerifyFogotPasswordState extends State<VerifyFogotPassword> {
               title: 'Verify',
               onPressed: () {
                 if (pinController.text.length == 4) {
-                  print("Code: ${pinController.text}");
                   pushTo(context, CreateNewPassword());
                 }
               },

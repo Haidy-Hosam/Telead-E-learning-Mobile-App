@@ -2,7 +2,7 @@ import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart'
 import 'package:e_learning_mobile_app/Core/CommonWidgets/custom_toggle_tabs.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/filed_search.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/online_course_item.dart';
 import 'package:e_learning_mobile_app/Features/Categories/widgets/mentor_item.dart';
@@ -53,14 +53,14 @@ class _OnlineCoursesViewState extends State<OnlineCoursesView> {
                 children: [
                   RichText(
                     text: TextSpan(
-                      style: AppTextStyles.body.copyWith(
+                      style: TextStyles.body.copyWith(
                         color: AppColors.blackColor,
                       ),
                       children: [
                         TextSpan(text: 'Result for '),
                         TextSpan(
                           text: '“Graphic Design”',
-                          style: AppTextStyles.caption.copyWith(
+                          style: TextStyles.caption.copyWith(
                             color: AppColors.primaryColor,
                             fontWeight: FontWeight.bold,
                           ),
@@ -73,7 +73,7 @@ class _OnlineCoursesViewState extends State<OnlineCoursesView> {
                     children: [
                       Text(
                         curTab == 0 ? '2480 Founds' : '18 Founds',
-                        style: AppTextStyles.caption.copyWith(
+                        style: TextStyles.caption.copyWith(
                           color: AppColors.primaryColor,
                           fontWeight: FontWeight.bold,
                         ),

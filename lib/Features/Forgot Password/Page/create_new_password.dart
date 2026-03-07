@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Widgets/app_passformfield.dart';
@@ -16,7 +16,7 @@ class CreateNewPassword extends StatelessWidget {
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
         title: Text(
           'Create New Password',
-          style: AppTextStyles.headline.copyWith(fontSize: 21),
+          style: TextStyles.headline.copyWith(fontSize: 21),
         ),
       ),
       body: Padding(
@@ -28,7 +28,7 @@ class CreateNewPassword extends StatelessWidget {
             Text(
               'Create Your New Password',
               textAlign: TextAlign.start,
-              style: AppTextStyles.body.copyWith(
+              style: TextStyles.body.copyWith(
                 color: AppColors.blackColor,
                 fontSize: 19,
                 fontWeight: FontWeight.w700,

@@ -1,5 +1,5 @@
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Features/Auth/Lets_You_In/lets_you_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,13 +12,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => LETS_YOU_IN()),
-      );
+      if (mounted) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => LetsYouIn()),
+        );
+      }
     });
   }
 
@@ -30,8 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.asset(AppImages.Oval, width: 280),
-            Image.asset(AppImages.Shape, width: 370),
+            Image.asset(AppImages.oval, width: 280),
+            Image.asset(AppImages.shape, width: 370),
             SvgPicture.asset(AppImages.logosvg, width: 100, fit: BoxFit.cover),
           ],
         ),

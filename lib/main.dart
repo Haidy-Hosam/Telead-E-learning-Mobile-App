@@ -1,6 +1,5 @@
-import 'package:e_learning_mobile_app/Core/Constans/AppFonts.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
-import 'package:e_learning_mobile_app/Features/Explore/pages/top_mentors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_theme.dart';
+import 'package:e_learning_mobile_app/Features/Auth/Splash_Screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,27 +13,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: AppFonts.Mulish,
-        scaffoldBackgroundColor: AppColors.backgraund,
-        textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(foregroundColor: AppColors.blackColor),
-        ),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: AppColors.primaryColor,
-          onSurface: AppColors.blackColor,
-        ),
-        inputDecorationTheme: InputDecorationTheme(
-          fillColor: AppColors.whiteColor,
-          filled: true,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide.none,
-          ),
-        ),
-      ),
-
-      home: TopMentors(),
+      theme: AppTheme.theme,
+      home: SplashScreen(),
     );
   }
 }

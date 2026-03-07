@@ -1,4 +1,4 @@
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +31,7 @@ class ContainerButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: AppTextStyles.caption.copyWith(
+            style: TextStyles.caption.copyWith(
               fontWeight: FontWeight.w600,
               color: AppColors.blackColor,
             ),

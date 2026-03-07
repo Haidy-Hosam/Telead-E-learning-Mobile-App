@@ -1,4 +1,4 @@
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -51,7 +51,7 @@ class SocialButton extends StatelessWidget {
             SizedBox(width: 10),
             Text(
               title,
-              style: AppTextStyles.subtitle.copyWith(
+              style: TextStyles.subtitle.copyWith(
                 color: AppColors.gray,
                 fontSize: 16,
               ),

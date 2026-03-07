@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Forgot%20Password/Page/verify_fogot_password.dart';
@@ -16,7 +16,7 @@ class ForgotPassword extends StatelessWidget {
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
         title: Text(
           'Forgot Password',
-          style: AppTextStyles.headline.copyWith(fontSize: 21),
+          style: TextStyles.headline.copyWith(fontSize: 21),
         ),
       ),
       body: Padding(
@@ -28,7 +28,7 @@ class ForgotPassword extends StatelessWidget {
               Text(
                 'Select which contact details should we use \n to Reset Your Password',
                 textAlign: TextAlign.center,
-                style: AppTextStyles.body.copyWith(
+                style: TextStyles.body.copyWith(
                   color: AppColors.gray,
                   fontSize: 14,
                   fontWeight: FontWeight.w600,

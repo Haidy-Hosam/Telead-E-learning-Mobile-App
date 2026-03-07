@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppTextStyles {
+class TextStyles {
   static const String fontFamily = "Mulish";
 
   static final TextStyle headline = TextStyle(

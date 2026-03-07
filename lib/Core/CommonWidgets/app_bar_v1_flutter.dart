@@ -18,7 +18,7 @@ class AppBarV1Flutter extends StatelessWidget implements PreferredSizeWidget {
         },
         icon: const Icon(Icons.arrow_back),
       ),
-      title: Text(title, style: AppTextStyles.headline.copyWith(fontSize: 21)),
+      title: Text(title, style: TextStyles.headline.copyWith(fontSize: 21)),
       actions: [
         if (actionFlag)
           Padding(

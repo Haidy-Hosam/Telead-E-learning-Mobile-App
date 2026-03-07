@@ -1,4 +1,4 @@
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -31,13 +31,13 @@ class MentorItem extends StatelessWidget {
                   children: [
                     Text(
                       'Sayed-Abd-Elaziz',
-                      style: AppTextStyles.body.copyWith(
+                      style: TextStyles.body.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text(
                       '3D Design',
-                      style: AppTextStyles.caption.copyWith(
+                      style: TextStyles.caption.copyWith(
                         fontWeight: FontWeight.w600,
                         color: AppColors.gray,
                       ),
@@ -48,7 +48,7 @@ class MentorItem extends StatelessWidget {
             ),
           ],
         ),
-        Divider(color: AppColors.lightGreenColor),
+        Divider(color: AppColors.lightGrayColor),
       ],
     );
   }

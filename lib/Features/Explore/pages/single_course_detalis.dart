@@ -1,8 +1,7 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/CommonWidgets/primary_button.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:e_learning_mobile_app/Features/Explore/listdata/listdatainstractor.dart';
 import 'package:e_learning_mobile_app/Features/Explore/widgets/commentw.dart';
@@ -24,9 +23,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
       appBar: AppBar(
         backgroundColor: AppColors.blackColor,
         leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () {},
           icon: SvgPicture.asset(IconsApp.iconBack),
           padding: EdgeInsets.only(left: 35),
         ),
@@ -43,7 +40,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                 bottomRight: Radius.circular(15),
               ),
             ),
-            child: Image.asset(AppImages.blackimage_png),
+            child: Image.asset(AppImages.blackimagePng),
           ),
           //detalis
           Expanded(
@@ -70,7 +67,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                           children: [
                             Text(
                               "Instructor",
-                              style: AppTextStyles.subtitle.copyWith(
+                              style: TextStyles.subtitle.copyWith(
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -93,14 +90,14 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                               children: [
                                 Text(
                                   "William S. Cunningha",
-                                  style: AppTextStyles.body.copyWith(
+                                  style: TextStyles.body.copyWith(
                                     color: AppColors.blackColor,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                                 Text(
                                   "Graphic Design",
-                                  style: AppTextStyles.caption.copyWith(
+                                  style: TextStyles.caption.copyWith(
                                     color: AppColors.gray,
                                     fontWeight: FontWeight.w700,
                                   ),
@@ -116,7 +113,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                         20.h,
                         Text(
                           "What You’ll Get",
-                          style: AppTextStyles.body.copyWith(
+                          style: TextStyles.body.copyWith(
                             color: AppColors.blackColor,
                             fontWeight: FontWeight.w600,
                           ),
@@ -140,7 +137,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                                   16.w,
                                   Text(
                                     Instractor.name[index],
-                                    style: AppTextStyles.caption.copyWith(
+                                    style: TextStyles.caption.copyWith(
                                       color: AppColors.gray,
                                       fontWeight: FontWeight.w700,
                                     ),
@@ -152,7 +149,7 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                         ),
                         Text(
                           "Reviews",
-                          style: AppTextStyles.body.copyWith(
+                          style: TextStyles.body.copyWith(
                             color: AppColors.blackColor,
                             fontWeight: FontWeight.w600,
                           ),
@@ -173,11 +170,6 @@ class _SingleCourseDetalisState extends State<SingleCourseDetalis> {
                               "The Course is Very Good dolor sit amet, consect tur adipiscing elit. Naturales divitias dixit parab les esse, quod parvo",
                           time: "2 Weeks Agos",
                           num: "578",
-                        ),
-
-                        PrimaryButton(
-                          title: "Enroll Course - \$55",
-                          onPressed: () {},
                         ),
                       ],
                     ),

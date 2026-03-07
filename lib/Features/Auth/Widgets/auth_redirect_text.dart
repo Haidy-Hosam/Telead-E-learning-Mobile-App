@@ -1,4 +1,4 @@
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
@@ -19,7 +19,7 @@ class AuthRedirectText extends StatelessWidget {
     return RichText(
       text: TextSpan(
         text: first,
-        style: AppTextStyles.body.copyWith(
+        style: TextStyles.body.copyWith(
           color: Colors.black,
           fontSize: 14,
           fontWeight: FontWeight.w700,

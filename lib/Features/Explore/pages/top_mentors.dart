@@ -1,11 +1,9 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
 import 'package:e_learning_mobile_app/Core/CommonWidgets/iconproject.dart';
-import 'package:e_learning_mobile_app/Core/Constans/AppImage.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Constans/app_image.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
-import 'package:e_learning_mobile_app/Core/functions/navigations.dart';
 import 'package:e_learning_mobile_app/Features/Explore/listdata/listdatainstractor.dart';
-import 'package:e_learning_mobile_app/Features/Explore/pages/mentor_details.dart';
 import 'package:e_learning_mobile_app/Features/Explore/pages/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -25,7 +23,10 @@ class TopMentors extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              pushTo(context, AllCategorySearch());
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AllCategorySearch()),
+              );
             },
             icon: SvgPicture.asset(
               IconsApp.iconsearcblack,
@@ -48,7 +49,7 @@ class TopMentors extends StatelessWidget {
 
         title: Text(
           "Top Mentors",
-          style: AppTextStyles.subtitle.copyWith(
+          style: TextStyles.subtitle.copyWith(
             fontWeight: FontWeight.w600,
             color: AppColors.blackColor,
             fontFamily: "Mulish",
@@ -68,9 +69,7 @@ class TopMentors extends StatelessWidget {
                 itemCount: 7,
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: () {
-                      pushTo(context, MentorDetails());
-                    },
+                    onTap: () {},
                     child: Row(
                       children: [
                         ClipOval(
@@ -87,13 +86,13 @@ class TopMentors extends StatelessWidget {
                           children: [
                             Text(
                               Instractor.name[index],
-                              style: AppTextStyles.subtitle.copyWith(
+                              style: TextStyles.subtitle.copyWith(
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                             Text(
                               Instractor.course[index],
-                              style: AppTextStyles.body.copyWith(
+                              style: TextStyles.body.copyWith(
                                 fontFamily: "Mulish",
                                 fontWeight: FontWeight.w700,
                                 color: AppColors.gray,

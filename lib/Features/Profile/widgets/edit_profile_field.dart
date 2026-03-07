@@ -29,7 +29,7 @@ class EditProfileField extends StatelessWidget {
         decoration: InputDecoration(
           prefixIcon: prefix,
           hint: Text(hint),
-          hintStyle: AppTextStyles.caption,
+          hintStyle: TextStyles.caption,
           suffixIcon: suffix,
         ),
       ),

@@ -32,8 +32,8 @@ class InboxItem extends StatelessWidget {
           const SizedBox(width: 8),
           Column(
             children: [
-              Text(title, style: AppTextStyles.body),
-              Text(subTitle, style: AppTextStyles.caption),
+              Text(title, style: TextStyles.body),
+              Text(subTitle, style: TextStyles.caption),
             ],
           ),
           const Spacer(),

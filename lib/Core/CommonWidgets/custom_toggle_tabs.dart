@@ -1,4 +1,4 @@
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomToggleTabs extends StatelessWidget {
@@ -32,7 +32,7 @@ class CustomToggleTabs extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isSelected
                     ? AppColors.greenColor
-                    : AppColors.lightGreenColor,
+                    : AppColors.lightGrayColor,
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Text(

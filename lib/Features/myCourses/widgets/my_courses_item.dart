@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -49,7 +49,7 @@ class MyCourseItem extends StatelessWidget {
                     children: [
                       Text(
                         'Graphic Design',
-                        style: AppTextStyles.caption.copyWith(
+                        style: TextStyles.caption.copyWith(
                           fontWeight: FontWeight.w700,
                           color: AppColors.orange,
                         ),
@@ -58,7 +58,7 @@ class MyCourseItem extends StatelessWidget {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         'Graphic Design Advanced',
-                        style: AppTextStyles.body.copyWith(
+                        style: TextStyles.body.copyWith(
                           color: AppColors.blackColor,
                           fontWeight: FontWeight.w600,
                         ),
@@ -73,7 +73,7 @@ class MyCourseItem extends StatelessWidget {
                           Text(
                             maxLines: 1,
                             '4.2',
-                            style: AppTextStyles.caption.copyWith(
+                            style: TextStyles.caption.copyWith(
                               fontWeight: FontWeight.w800,
                             ),
                           ),
@@ -81,7 +81,7 @@ class MyCourseItem extends StatelessWidget {
                           Text(
                             maxLines: 1,
                             "|",
-                            style: AppTextStyles.caption.copyWith(
+                            style: TextStyles.caption.copyWith(
                               fontWeight: FontWeight.w800,
                             ),
                           ),
@@ -89,7 +89,7 @@ class MyCourseItem extends StatelessWidget {
                           Text(
                             maxLines: 1,
                             '3 Hrs 06 Mins',
-                            style: AppTextStyles.caption.copyWith(
+                            style: TextStyles.caption.copyWith(
                               fontWeight: FontWeight.w800,
                             ),
                           ),
@@ -113,7 +113,7 @@ class MyCourseItem extends StatelessWidget {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       border: Border.all(
-                                        color: AppColors.lightGreenColor,
+                                        color: AppColors.lightGrayColor,
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(10),
@@ -121,7 +121,7 @@ class MyCourseItem extends StatelessWidget {
                                     child: LinearProgressIndicator(
                                       value: 93 / 125,
                                       backgroundColor:
-                                          AppColors.lightGreenColor,
+                                          AppColors.lightGrayColor,
                                       valueColor: AlwaysStoppedAnimation<Color>(
                                         AppColors.greenColor,
                                       ),

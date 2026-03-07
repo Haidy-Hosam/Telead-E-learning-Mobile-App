@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/extension.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Core/Style/app_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +35,7 @@ class Commentw extends StatelessWidget {
                     child: Text(
                       name,
                       overflow: TextOverflow.ellipsis,
-                      style: AppTextStyles.body.copyWith(
+                      style: TextStyles.body.copyWith(
                         color: AppColors.blackColor,
                         fontWeight: FontWeight.w600,
                       ),
@@ -59,7 +59,7 @@ class Commentw extends StatelessWidget {
                         2.w,
                         Text(
                           "4.5",
-                          style: AppTextStyles.caption.copyWith(
+                          style: TextStyles.caption.copyWith(
                             color: AppColors.blackColor,
                             fontWeight: FontWeight.w600,
                           ),
@@ -72,7 +72,7 @@ class Commentw extends StatelessWidget {
               8.h,
               Text(
                 text,
-                style: AppTextStyles.caption.copyWith(
+                style: TextStyles.caption.copyWith(
                   color: AppColors.blackColor,
                   fontWeight: FontWeight.w700,
                 ),
@@ -84,7 +84,7 @@ class Commentw extends StatelessWidget {
                   8.w,
                   Text(
                     num,
-                    style: AppTextStyles.caption.copyWith(
+                    style: TextStyles.caption.copyWith(
                       fontSize: 12,
                       fontWeight: FontWeight.w800,
                     ),
@@ -92,7 +92,7 @@ class Commentw extends StatelessWidget {
                   22.w,
                   Text(
                     time,
-                    style: AppTextStyles.caption.copyWith(
+                    style: TextStyles.caption.copyWith(
                       fontSize: 12,
                       fontWeight: FontWeight.w800,
                     ),

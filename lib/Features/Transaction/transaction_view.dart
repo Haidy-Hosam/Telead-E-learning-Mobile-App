@@ -1,5 +1,5 @@
 import 'package:e_learning_mobile_app/Core/CommonWidgets/app_bar_v2_custom.dart';
-import 'package:e_learning_mobile_app/Core/Style/Appcolors.dart';
+import 'package:e_learning_mobile_app/Core/Style/app_colors.dart';
 import 'package:e_learning_mobile_app/Features/Transaction/transaction_item.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +31,7 @@ class _TransactionViewState extends State<TransactionView> {
                     subTitle: 'Web Designer',
                   ),
                   separatorBuilder: (context, index) =>
-                      Divider(color: AppColors.lightGreenColor, thickness: 2),
+                      Divider(color: AppColors.lightGrayColor, thickness: 2),
                 ),
               ),
             ],
